@@ -1,0 +1,8 @@
+// Footer Styles
+footer {
+    padding: $padding;
+    border-top: 1px solid black;
+    p {
+        @include flatten;
+    }
+}
