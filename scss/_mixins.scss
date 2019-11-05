@@ -56,6 +56,17 @@
     }
 }
 
+// Layout Mixins
+
+// Mixins for creating a flex row of
+// and evenly spacing out the
+// elements along the row
+@mixin flex-layout-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 // Center elements in a flex
 // container
 @mixin flex-center {
