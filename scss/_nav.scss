@@ -33,29 +33,5 @@ nav {
 
     }
 
-    @include mq($phoneLandscape) {
-    
-        display: block;
-        height: $height;
-        border-top: $border;
-
-        ul {
-            display: flex;
-        }
-
-        li {
-            flex: 1;
-        }
-
-        a {
-            line-height: $height;
-            border-right: $border;
-            border-top: $border;
-            @at-root nav li:last-child a {
-                border-right: none;
-            }
-        }
-        
-    }
 
 }
