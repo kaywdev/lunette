@@ -14,16 +14,16 @@
     p{
         margin: 2em 0;
     }
-     .cta-btn {
-        width: 100px;
-      @include margin-center;
-        text-align: center;
-        padding: 10px;
-        border: 1px solid black;
-        border-radius: $border-radius;
+    //  .cta-btn {
+    //     width: 100px;
+    //   @include margin-center;
+    //     text-align: center;
+    //     padding: 10px;
+    //     border: 1px solid black;
+    //     border-radius: $border-radius;
 
-        a{
-            text-decoration: none;
-        }
-    }
+    //     a{
+    //         text-decoration: none;
+    //     }
+    // }
 }
