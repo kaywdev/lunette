@@ -2,7 +2,6 @@
 header {
     // background-color: $brand-color;
     padding: $padding/2 $padding;
-    @include flex-layout-row;
     align-items: center;
 
     h1 {
@@ -11,4 +10,49 @@ header {
         font-size: 1.6em;
        
     }
+
+    .hm-nav{
+        display: none;
+    }
+
+    .m-icon{
+        @include m-icon;
+        @include bg-img;
+    }
+    .search{
+        background-image:url(../images/search-icon.svg); 
+    }
+    .location-icon{
+        background-image:url(../images/location.svg); 
+        display:none;
+        @include mq($phoneLandscape){
+            display:block;
+       }
+    }
+    .account{
+        background-image:url(../images/account.svg); 
+        display:none;
+        @include mq($phoneLandscape){
+            display:block;
+       }
+    }
+    .shopping{
+        background-image:url(../images/shopping-bag.svg); 
+        display:none;
+        @include mq($phoneLandscape){
+            display:block;
+       }
+    }
+
+    .top-header{
+        display:flex;
+        justify-content: space-between;
+        width:100%;
+    }
+
+    .gl-nav{
+      @include flex-layout-row;
+      padding: 30px 0;
+    }
+
 }

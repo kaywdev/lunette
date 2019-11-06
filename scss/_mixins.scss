@@ -65,6 +65,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
 // Center elements in a flex
@@ -75,3 +76,24 @@
     align-items: center;
     flex-direction: column;
 }
+
+// Media Query Mixin
+@mixin mq($w){
+    @media (min-width: $w){
+        @content;
+    }
+}
+
+//Background image 
+@mixin bg-img{
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+//mobile-size icon 
+@mixin m-icon{
+    width:30px;
+    height: 30px;
+}
+

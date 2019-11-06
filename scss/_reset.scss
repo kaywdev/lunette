@@ -21,3 +21,9 @@ body {
     margin: 0;
     padding:0;
 }
+
+//remove text-decoration from anchor
+a {
+    text-emphasis: none;
+    color: black;
+}
