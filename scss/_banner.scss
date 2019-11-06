@@ -3,3 +3,27 @@
     height: 350px;
     background-color: #ccc;
 }
+
+.banner-text {
+    padding: $padding;
+
+    h1{
+        font-size: 1.5em;
+    }
+
+    p{
+        margin: 2em 0;
+    }
+     .cta-btn {
+        width: 100px;
+      @include margin-center;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+
+        a{
+            text-decoration: none;
+        }
+    }
+}
