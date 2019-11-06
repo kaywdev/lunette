@@ -1,0 +1,14 @@
+//gls-choice styling
+.gls-choice{
+    .choice{
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+        background-color: $img-bg-color;
+        @include margin-center;
+        border-radius: $border-radius;
+    }
+    h2 {
+        padding-left: $padding;
+    }
+}
