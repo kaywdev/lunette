@@ -5,4 +5,28 @@ footer {
     p {
         @include flatten;
     }
+    .footer-sns{
+        @include flex-layout-row;
+        width: 60%;
+        @include margin-center;
+    }
+    .footer-nav{
+        @include flex-layout-row;
+        padding: $padding/2 0;
+
+        a{
+            font-size: 1em;
+        }
+    }
+    .footer-bottom{
+        text-align: center;
+        font-size: 0.8em;
+        p:first-child{
+           padding-bottom: $padding/2;
+        }
+        p:not(:first-child){
+        padding-top: $padding/4;
+        }
+        
+    }
 }
