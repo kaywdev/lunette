@@ -54,12 +54,12 @@ header {
 
     .gl-nav{
       @include flex-layout-row;
-      padding: 20px 0;
+      padding: 10px 0;
     }
 
     .glass-nav{
         height: 65px;
-        width: 100%;
+        width: 90%;
         line-height: 65px;
         text-align: left;
         @include margin-center;
@@ -71,7 +71,8 @@ header {
      .hm-nav{
             .show &{
             position: absolute;
-            width: 85%;
+            left: 0;
+            width: 100%;
             background-color: #fff;
         }
         li:nth-child(3),
