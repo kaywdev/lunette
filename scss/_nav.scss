@@ -8,7 +8,8 @@ nav {
     // display: none;
 
     .show & {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
     ul {
@@ -31,7 +32,6 @@ nav {
             background-color: rgba(white, 0.3);
         }
 
-    }
-
+       }
 
 }
