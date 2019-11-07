@@ -2,6 +2,10 @@
 const body = document.body;
 const hamburger = document.getElementById('hamburger');
 const gotoTop = document.getElementById('gotopbtn');
+const search = document.getElementById('search');
+const searchBar= document.getElementById('search-bar');
+
+
 
 hamburger.addEventListener('click', openMenu);
 hamburger.addEventListener('mousedown', function(e){
@@ -11,6 +15,16 @@ hamburger.addEventListener('mousedown', function(e){
 function openMenu(){
     body.classList.toggle('show');
 }
+
+search.addEventListener('click', openSearch);
+search.addEventListener('mousedown', function(e){
+  e.preventDefault();
+});
+
+function openSearch(){
+ searchBar.classList.toggle('show');
+}
+
 
 // Show / Hide Menu
 // When the user scrolls down 20px from the top of the document, show the button

@@ -20,9 +20,32 @@ header {
         @include m-icon;
         @include bg-img;
     }
+
+    .shopping{
+        background-image:url(../images/shopping-bag.svg); 
+    }
+   
     .search{
         background-image:url(../images/search-icon.svg); 
     }
+
+    .search-bar{
+        display:none;
+        @include mq($phoneLandscape){
+            display:flex;
+       }
+       .search-input{
+           margin-left:10px;
+           width:150px;
+           border-bottom:1px solid black ;
+           display:none;
+
+       }
+       .show > .search-input {
+            display:block;
+       }
+    }
+    
     .location-icon{
         background-image:url(../images/location.svg); 
         display:none;
@@ -37,13 +60,7 @@ header {
             display:block;
        }
     }
-    .shopping{
-        background-image:url(../images/shopping-bag.svg); 
-        display:none;
-        @include mq($phoneLandscape){
-            display:block;
-       }
-    }
+    
 
     .top-header{
         display:flex;
@@ -55,6 +72,10 @@ header {
     .gl-nav{
       @include flex-layout-row;
       padding: 10px 0;
+      @include mq($phoneLandscape){
+        max-width: 50%;
+        @include margin-center;
+         }
     }
 
     .glass-nav{
@@ -68,6 +89,7 @@ header {
         border-radius: 10px;
         margin-top: 15px;
     }
+
      .hm-nav{
             .show &{
             position: absolute;
@@ -80,6 +102,12 @@ header {
         li:last-child {
             padding: 10px 0;
         }
+     }
+
+     .icon3{
+        display: flex;
+        width: 120px;
+        justify-content: space-between;
      }
 
 }
