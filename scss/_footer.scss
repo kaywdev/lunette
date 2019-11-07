@@ -1,21 +1,20 @@
 // Footer Styles
 footer {
-    padding: $padding;
-    border-top: 1px solid black;
+    padding: 10px $padding $padding;
     p {
         @include flatten;
     }
-    .footer-sns{
-        @include flex-layout-row;
-        width: 60%;
-        @include margin-center;
-    }
+    
     .footer-nav{
         @include flex-layout-row;
-        padding: $padding/2 0;
+        padding: 0 0 $padding/2;
 
         a{
             font-size: 1em;
+        }
+        @include mq($phoneLandscape){
+            max-width: 70%;
+            @include margin-center;
         }
     }
     .footer-bottom{

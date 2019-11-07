@@ -12,6 +12,19 @@
     h2 {
         padding-left: $padding;
     }
+    @include mq($phoneLandscape){
+        display:flex;
+        padding-top: 30px;
+        
+         h2{
+             margin: 0;
+         }
+         .choice{
+             max-width:250px;
+             height: 130px;
+             line-height: 130px;
+         }
+        }
 }
 
 //article styling
@@ -23,11 +36,26 @@
     }
     article{
         padding: 0 $padding;
+        h1{
+            text-align: center;
+        }
+    }
+    @include mq($phoneLandscape){
+        display: flex;
+    .article-img{
+        width:50%;
+        height: 432px; /*it should be 100% for bg-image*/
+    }
+    article{
+        width:50%;
+        padding: 20px 30px;
+    }
     }
 }
 
 //customize styling
 .customize{
+    padding-bottom: $padding;
     .gls-slide{
         width:100%;
         height: 250px;
@@ -35,6 +63,15 @@
     }
     .cstm-text{
         padding: 0 $padding;
+        @include mq($phoneLandscape){
+            max-width: 500px;
+            @include margin-center;
+            padding: 30px;
+             text-align: center;
+        }
+    }
+    @include mq($tabletLandscape){
+        display:flex;
     }
 }
 
@@ -53,6 +90,21 @@
             @include margin-center;
             background-color: $img-bg-color;
         }
+        @include mq($phoneLandscape){
+          .benefits-wrapper{
+            display: flex;
+            .benefit{
+                @include flex-center;
+                h2{
+                    font-size:1em;
+                }
+                p {
+                    padding: 0px 20px;
+                    margin-top: 0;
+                }
+            }
+            }
+        }
     }
 
 //location styling
@@ -68,11 +120,23 @@
         .location-text{
             padding: 0 $padding;
         }
+        @include mq($phoneLandscape){
+            display: flex;
+            padding-bottom:$padding;
+            .location-img{
+                width:50%;
+                height: 330px;
+            }
+            .location-text{
+                width:50%;
+            }
+        }
     }
 
 //subscribe styling
     .subscribe{
         padding: 0 $padding $padding;
+        border-bottom:1px solid black;
         h1{
             text-align: center;
         }
@@ -94,3 +158,35 @@
             }
         }
     }
+
+//sns styling
+.sns{
+    @include flex-layout-row;
+    width: 60%;
+    @include margin-center;
+    padding: 30px 0 20px;
+}
+
+//social-wrapper styling
+.social-wrapper {
+    @include mq($phoneLandscape){
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    border-top:1px solid black;
+    border-bottom:1px solid black;  
+    .sns{
+        order:1;
+        width: 70%;
+    }
+    .subscribe{
+        order:2;
+        padding: 0 30px 20px;
+        border-bottom: none;
+        h1{
+            font-size: 1em;
+            text-align: left;
+        }
+    }
+}
+    
+}
