@@ -9,6 +9,9 @@ header {
         @include flatten;
         // color: $text-color-light;
         font-size: 1.6em;
+        @include mq($phoneLandscape){
+            text-align: center;;
+        }
        
     }
 
@@ -71,6 +74,10 @@ header {
         justify-content: space-between;
         width:100%;
         padding: 15px 0;
+        @include mq($phoneLandscape){
+         display:grid;
+         grid-template-columns: 1fr 200px 1fr;
+        }
     }
 
     .gl-nav{
@@ -109,9 +116,13 @@ header {
      }
 
      .icon3{
-        display: flex;
-        width: 120px;
-        justify-content: space-between;
+        @include mq($phoneLandscape){
+            display: flex;
+            justify-content: flex-end;
+            .m-icon:not(:last-child){
+                margin-right:20px;
+            }
+        }
      }
 
 }
