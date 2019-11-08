@@ -38,13 +38,17 @@ header {
            margin-left:10px;
            width:150px;
            border-bottom:1px solid black ;
-           display:none;
-
-       }
-       .show > .search-input {
-            display:block;
        }
     }
+        .search-form{
+            visibility: hidden;
+            .visible &{
+                visibility: visible;
+                .search-input{
+                border:1px solid red;
+            }
+            }
+        }
     
     .location-icon{
         background-image:url(../images/location.svg); 

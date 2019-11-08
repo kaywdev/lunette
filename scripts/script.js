@@ -3,7 +3,7 @@ const body = document.body;
 const hamburger = document.getElementById('hamburger');
 const gotoTop = document.getElementById('gotopbtn');
 const search = document.getElementById('search');
-const searchBar= document.getElementById('search-bar');
+const searchForm= document.getElementById('search-form');
 
 
 
@@ -22,7 +22,7 @@ search.addEventListener('mousedown', function(e){
 });
 
 function openSearch(){
- searchBar.classList.toggle('show');
+ searchForm.classList.toggle('visible');
 }
 
 
