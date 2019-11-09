@@ -8,6 +8,12 @@
     width: 100%;
     height: 350px;
     background-color: $img-bg-color;
+    @include mq($tabletLandscape){
+        height:400px;
+    }
+    @include mq($desktopMedium){
+        height:500px;
+    }
 }
 
 .banner-text {

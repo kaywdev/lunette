@@ -47,7 +47,7 @@
         display: flex;
     .article-img{
         width:50%;
-        height: 432px; /*it should be 100% for bg-image*/
+        height: 400px; /*it should be 100% for bg-image*/
     }
     article{
         width:50%;
@@ -156,6 +156,7 @@
             }
             #email{
                 width:100%;
+                border: 0;
             }
             
         }
@@ -191,7 +192,7 @@
     border-bottom:1px solid black;  
     .social-container{
         display: grid;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 50% 50%;
         max-width: 1200px;
      @include margin-center;
      line-height: 1;
