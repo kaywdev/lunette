@@ -1,81 +1,111 @@
 //gls-choice styling
 .gls-choice{
     padding: 30px;
-    .choice{
-        width: 100%;
-        height: 100px;
-        line-height: 100px;
-        background-color: $img-bg-color;
-        @include margin-center;
-        border-radius: $border-radius;
-    }
-    .eg{
-        margin-bottom: 30px;
-    }
-    h2 {
-        padding-left: $padding;
-    }
-    @include mq($phoneLandscape){
-        display: grid;
-        padding-top: 30px;
-        grid-template-columns: 300px 300px;
-        grid-gap: 10px;
-        justify-content: center;
-        
-         h2{
-             margin: 0;
-         }
-         .choice{
-             max-width:250px;
-             height: 130px;
-             line-height: 130px;
-         }
-         .eg{
-            margin-bottom: 0;
-        }
-    }
-
-    //products.html
-    
-            .p-choice{
-                height:70px;
-                h2{
-                    line-height: 70px;
-                }
+            .choice{
+                width: 100%;
+                height: 100px;
+                line-height: 100px;
+                background-color: $img-bg-color;
+                @include margin-center;
+                border-radius: $border-radius;
             }
-
-            .p-choice-sg{
-                margin-bottom: $padding;
+            .eg{
+                margin-bottom: 30px;
             }
-
-            .p-container{
-                padding: $padding 0 $padding*2;
-                .product-wrapper{
-                    text-align: center;
-                    .p-img{
-                            width: 180px;
-                            height: 70px;
-                            background-color:$img-bg-color;
-                            @include margin-center;
-                    }
-                    h3{
-                    margin: 10px 0 0 0;
-                    font-size: 1.2em;
-                    }
-                    h4{
-                        font-weight: normal;
+            h2 {
+                padding-left: $padding;
+            }
+                @include mq($phoneLandscape){
+                        display: grid;
+                        padding-top: 30px;
+                        grid-template-columns: 300px 300px;
+                        grid-gap: 10px;
+                        justify-content: center;
+                        
+                        h2{
+                            margin: 0;
                         }
-                    }
-                
-                .product-3{
-                    display: none;
+                        .choice{
+                            max-width:250px;
+                            height: 130px;
+                            line-height: 130px;
+                           
+                        }
+                        .eg{
+                            margin-bottom: 0;
+                           
+                        }
                 }
-            }   
-            .p-container:last-child{
-                padding-bottom: $padding;
-            }
+     }
+    //products.html
+    .p-gls-choice{
+                padding: $padding*2 $padding;
+                .choice{
+                    @include mq($phoneLandscape){
+                        max-width: 100%;
+                    }
+                }
+                .p-choice{
+                    height:70px;
+                    h2{
+                        line-height: 70px;
+                    }
+                }
 
-}
+                .p-choice-sg{
+                    margin-bottom: $padding;
+                }
+
+                .p-container{
+                    padding: $padding;
+                    .product-wrapper{
+                        text-align: center;
+                        .p-img{
+                                width: 180px;
+                                height: 70px;
+                                background-color:$img-bg-color;
+                                @include margin-center;
+                                @include mq($phoneLandscape){
+                                    width: 200px;
+                                    height: 100px;
+                                 }
+                        }
+                        h3{
+                        margin: 10px 0 0 0;
+                        font-size: 1.2em;
+                        }
+                        h4{
+                            font-weight: normal;
+                            }
+                        }
+                    
+                        .product-3{
+                            display: none;
+                            @include mq($phoneLandscape){
+                               display:block;
+                            }
+                        }
+
+                       
+                        @include mq($phoneLandscape){
+                           display: grid;
+                           grid-template-columns: 50% 50%;
+                           justify-content: center;
+                        }
+                        @include mq($tabletLandscape){
+                            grid-template-columns: repeat(3, 33%);
+                         }
+                    }   
+                        .p-container:last-child{
+                            padding-bottom: $padding;
+                        }
+                        @include mq($phoneLandscape){
+                            grid-template-columns: 1fr;
+                        }
+                        .see-more-btn{
+                            margin-bottom:$padding*2;
+                        }
+    }
 
 //article styling
 .article{
@@ -188,7 +218,7 @@
 //styles styling
     .styles{
        text-align: center;
-    
+      
        .styles-wrapper{
            position: relative;
                 .gallery-arrow {
@@ -201,26 +231,60 @@
                     position: absolute;
                     left: 0;
                     top: 13vh;
+                    @include mq($phoneLandscape){
+                        top:50%;
+                    }
                 }
                 .arrow-right{
                     transform: rotate(180deg);
                     position: absolute;
                     right: 0;
                     top: 13vh;
+                    @include mq($phoneLandscape){
+                        top: 50%;
+                    }
                 }
-            .style-img {
-                width: 100%;
-                height: 200px;
-                background-color: $img-bg-color;
-                @include margin-center;
-                }
-                .style-img:nth-child(1),
-                .style-img:nth-child(2){
-                    display:none;
+                .style-gallery{
+                    .style-img {
+                        width: 100%;
+                        height: 200px;
+                        background-color: $img-bg-color;
+                        @include margin-center;
+                        }
+                    .style-img:nth-child(2),
+                    .style-img:nth-child(3){
+                        display:none; 
+                        }
+                        .style-img:nth-child(2){
+                            @include mq($phoneLandscape){
+                                display:block;
+                            }
+                        }
+
+                        .style-img:nth-child(3){
+                            @include mq($tabletLandscape){
+                                display:block;
+                            }
+                        }
+
+                        @include mq($phoneLandscape){
+                           display:grid; 
+                           grid-template-columns: 50% 50%;
+                          grid-gap: 10px;
+
+                        }
+                        
+                        @include mq($tabletLandscape){
+                            grid-template-columns: repeat(3, 33%);
+                         }
+
+                        
                 }
        }
-               
-            }
+       @include mq($phoneLandscape){
+        padding-bottom:10px;
+        }  
+    }
     
 
 

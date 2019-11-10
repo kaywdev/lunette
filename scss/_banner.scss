@@ -20,6 +20,13 @@
     h1{
         text-align:center;
         line-height: 350px;
+        @include mq($tabletLandscape){
+            line-height:400px;
+        }
+        @include mq($desktopMedium){
+            line-height:500px;
+            font-size:2.5em;
+        }
     }
 }
 
