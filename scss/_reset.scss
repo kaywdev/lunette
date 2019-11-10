@@ -15,6 +15,10 @@ img {
     height: auto;
 }
 
+//h1, h2, p margin, padding reset
+h1, h2, h3, p{
+    margin-top: 0;
+}
 
 // Remove Margins on the body
 body {

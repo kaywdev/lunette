@@ -1,6 +1,6 @@
 //gls-choice styling
 .gls-choice{
-    padding: 0 $padding;
+    padding: 30px;
     .choice{
         width: 100%;
         height: 100px;
@@ -8,6 +8,9 @@
         background-color: $img-bg-color;
         @include margin-center;
         border-radius: $border-radius;
+    }
+    .eg{
+        margin-bottom: 30px;
     }
     h2 {
         padding-left: $padding;
@@ -27,6 +30,9 @@
              height: 130px;
              line-height: 130px;
          }
+         .eg{
+            margin-bottom: 0;
+        }
         }
 }
 
@@ -38,7 +44,7 @@
         background-color: $img-bg-color;
     }
     article{
-        padding: 0 $padding;
+        padding: $padding;
         h1{
             text-align: center;
         }
@@ -65,7 +71,7 @@
         background-color: $img-bg-color;
     }
     .cstm-text{
-        padding: 0 $padding;
+        padding:$padding;
         @include mq($phoneLandscape){
             max-width: 500px;
             @include margin-center;
@@ -86,6 +92,9 @@
         }
         .benefit{
             padding: $padding/2 0;
+        }
+        .benefit-text {
+            padding-top: $padding;
         }
         .bf-icon{
             width:80px;
@@ -121,7 +130,7 @@
             background-color: $img-bg-color;
         }
         .location-text{
-            padding: 0 $padding;
+            padding: $padding;
         }
         @include mq($phoneLandscape){
             display: flex;
@@ -138,7 +147,7 @@
 
 //subscribe styling
     .subscribe{
-        padding: 0 $padding $padding;
+        padding: $padding;
         border-bottom:1px solid black;
         h1{
             text-align: center;
@@ -181,7 +190,7 @@
     @include flex-layout-row;
     width: 60%;
     @include margin-center;
-    padding-top: 30px;
+    padding: 30px;
 }
 
 //social-wrapper styling
@@ -194,8 +203,9 @@
         display: grid;
         grid-template-columns: 50% 50%;
         max-width: 1200px;
-     @include margin-center;
-     line-height: 1;
+        @include margin-center;
+        line-height: 1;
+        align-items: center;
     }
     .sns{
         order:1;
@@ -205,7 +215,7 @@
     }
     .subscribe{
         order:2;
-        padding: 0 30px 20px;
+        padding: 20px 30px;
         border-bottom: none;
         h1{
             font-size: 1em;
