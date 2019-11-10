@@ -224,13 +224,13 @@
                 .gallery-arrow {
                     width: 30px;
                     height: 30px;
-                    background-image: url("../images/slide-arrow.svg");
+                    background-image: url("../images/slide-arrow-white.svg");
                     background-repeat: no-repeat;
                 }
                 .arrow-left {
                     position: absolute;
                     left: 0;
-                    top: 13vh;
+                    top: 43%;
                     @include mq($phoneLandscape){
                         top:50%;
                     }
@@ -239,7 +239,7 @@
                     transform: rotate(180deg);
                     position: absolute;
                     right: 0;
-                    top: 13vh;
+                    top: 43%;
                     @include mq($phoneLandscape){
                         top: 50%;
                     }
@@ -368,5 +368,253 @@
             }
         }
     }
+}
 
+//item.html
+.basic-info{
+    padding:$padding;
+    h1, h2, h3{
+        margin: 0;
+    }
+    .item-info{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        align-items: center;
+    }
+    .info1{
+        font-size: 2em;
+    }
+    .info2{
+        order:2;
+        font-weight: normal;
+        font-size: 1.3em;
+    }
+    .info3{
+        font-size: 1.5em;
+        justify-self: end;
+    }
+    @include mq($phoneLandscape){
+        padding-right: 60px;
+    }
+    @include mq($tabletLandscape){
+        max-width: 900px;
+        @include margin-center;
+    }
+}
+.one-item{
+    padding: 0 $padding $padding;
+    .item-container{
+        .design-wrapper{
+            .rotate-img{
+                .item-img{
+                    width:100%;
+                    height: 200px;
+                    background-color: $img-bg-color;
+                    @include margin-center;
+                }
+                .rotate-range{
+                    width:100%;
+                    height: 50px;
+                    background-color: $img-bg-color;
+                    @include margin-center;
+                    margin-top: 5px;
+                }
+            }
+            .selection{
+                display: grid;
+                grid-gap: 30px;
+                padding: $padding 0;
+                .choices{
+                    display: grid;
+                    grid-template-columns: 25% 1fr 1fr 1fr;
+                    align-items: center;
+                    grid-gap: 10px;
+                    h2{
+                        padding: 0;
+                        font-size: 1em;
+                        margin: 0;
+                    }
+                    .lense-img{
+                        width: 50px;
+                        height: 50px;
+                        background-color: $img-bg-color;
+                        border-radius: 50%;
+                        @include mq($phoneLandscape){
+                            width: 35px;
+                            height: 35px; 
+                        }
+                    }
+                    .frame-img{
+                        width: 50px;
+                        height: 10px;
+                        background-color: $img-bg-color;
+                        @include mq($phoneLandscape){
+                            width: 35px;
+                        }
+                    }
+                    
+                } 
+                .frame-choice{
+                    padding-top:0;
+                }
+                .gift-choice{
+                    display: grid;
+                    grid-template-columns: 25% 1fr;
+                    align-items: start;
+                    .checkbox{
+                        justify-self: self-start;
+                    }
+                    h2{
+                        padding-top:0;
+                    }
+                }
+                @include mq($phoneLandscape){
+                    padding-top: 0;
+                }
+            }
+            @include mq($phoneLandscape){
+                display: grid;
+                grid-template-columns: 65% 30%;
+                grid-gap: 10px;
+            }
+            @include mq($tabletLandscape){
+                grid-gap: 4%;
+            }
+        }
+        .description{
+            .item-detail{
+                .detail-wrapper{
+                    display:grid;
+                    grid-template-columns: 35% 1fr;
+                    align-items: center;
+
+                    h2{
+                        font-size: 1em;
+                    }
+                    h3{
+                        font-size: 1em;
+                        font-weight: normal;
+                    }
+                    .star-wrapper{
+                        display: flex;
+                        .star-img{
+                            width:30px;
+                            height:30px;
+                            background-image: url("../images/star.png");
+                            background-repeat: no-repeat;
+                            background-size: cover;
+
+                        }
+                    }
+                }
+            }
+            @include mq($phoneLandscape){
+                display:grid;
+                grid-gap: 5%;
+                grid-template-columns: 50% 45%;            
+            }
+        }
+    }
+    @include mq($tabletLandscape){
+        max-width: 900px;
+        @include margin-center;
+    }
+}
+.suggestion{
+    padding: $padding 0;
+    .suggestion-text{
+        padding: 0 $padding;
+        h1{
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        span{
+            font-weight:bold;
+        }
+        .border{
+            width: 100px;
+            border-top: 1px solid black;
+            @include margin-center;
+            padding-bottom: $padding;
+        }
+    }
+    .styles-wrapper{
+        position: relative;
+             .gallery-arrow {
+                 width: 30px;
+                 height: 30px;
+                 background-image: url("../images/slide-arrow.svg");
+                 background-repeat: no-repeat;
+             }
+             .arrow-left {
+                 position: absolute;
+                 left: 0;
+                 top: 43%;
+                 @include mq($phoneLandscape){
+                     top:50%;
+                 }
+             }
+             .arrow-right{
+                 transform: rotate(180deg);
+                 position: absolute;
+                 right: 0;
+                 top: 43%;
+                 @include mq($phoneLandscape){
+                     top: 50%;
+                 }
+             }
+             .style-gallery{
+                 .style-img {
+                        width: 80%;
+                        height: 200px;
+                        background-color: $img-bg-color;
+                        @include margin-center;
+                        @include mq($phoneLandscape){
+                            margin: 0;
+                        }
+                        @include mq($tabletLandscape){
+                          width:100%;
+                        }
+                     
+                     }
+                 .style-img:nth-child(2),
+                 .style-img:nth-child(3){
+                     display:none; 
+                     }
+                     .style-img:nth-child(2){
+                         @include mq($phoneLandscape){
+                             display:block;
+                             justify-self: start;
+                         }
+                     }
+
+                     .style-img:nth-child(3){
+                         @include mq($tabletLandscape){
+                             display:block;
+                         }
+                     }
+
+                     @include mq($phoneLandscape){
+                        display:grid; 
+                        grid-template-columns: 50% 50%;
+                       grid-gap: 10px;
+                       justify-items: end;
+
+                     }
+                     
+                     @include mq($tabletLandscape){
+                         grid-template-columns: repeat(3, 33%);
+                         max-width: 900px;
+                         @include margin-center;
+                      }
+
+                     
+             }
+    }
+    @include mq($phoneLandscape){
+        p{
+            text-align: center;
+        }
+    }
 }
