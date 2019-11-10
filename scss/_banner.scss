@@ -16,6 +16,13 @@
     }
 }
 
+.banner-title{
+    h1{
+        text-align:center;
+        line-height: 350px;
+    }
+}
+
 .banner-text {
     padding: $padding;
 
@@ -29,6 +36,8 @@
     @include mq($phoneLandscape){
         width:50%;
         line-height: 0.9;
-         }
+    }
+
+    
    
 }

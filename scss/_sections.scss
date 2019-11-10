@@ -33,7 +33,48 @@
          .eg{
             margin-bottom: 0;
         }
-        }
+    }
+
+    //products.html
+    
+            .p-choice{
+                height:70px;
+                h2{
+                    line-height: 70px;
+                }
+            }
+
+            .p-choice-sg{
+                margin-bottom: $padding;
+            }
+
+            .p-container{
+                padding: $padding 0 $padding*2;
+                .product-wrapper{
+                    text-align: center;
+                    .p-img{
+                            width: 180px;
+                            height: 70px;
+                            background-color:$img-bg-color;
+                            @include margin-center;
+                    }
+                    h3{
+                    margin: 10px 0 0 0;
+                    font-size: 1.2em;
+                    }
+                    h4{
+                        font-weight: normal;
+                        }
+                    }
+                
+                .product-3{
+                    display: none;
+                }
+            }   
+            .p-container:last-child{
+                padding-bottom: $padding;
+            }
+
 }
 
 //article styling
@@ -144,6 +185,44 @@
             }
         }
     }
+//styles styling
+    .styles{
+       text-align: center;
+    
+       .styles-wrapper{
+           position: relative;
+                .gallery-arrow {
+                    width: 30px;
+                    height: 30px;
+                    background-image: url("../images/slide-arrow.svg");
+                    background-repeat: no-repeat;
+                }
+                .arrow-left {
+                    position: absolute;
+                    left: 0;
+                    top: 13vh;
+                }
+                .arrow-right{
+                    transform: rotate(180deg);
+                    position: absolute;
+                    right: 0;
+                    top: 13vh;
+                }
+            .style-img {
+                width: 100%;
+                height: 200px;
+                background-color: $img-bg-color;
+                @include margin-center;
+                }
+                .style-img:nth-child(1),
+                .style-img:nth-child(2){
+                    display:none;
+                }
+       }
+               
+            }
+    
+
 
 //subscribe styling
     .subscribe{
@@ -179,49 +258,51 @@
         }
     }
 
-//sns styling
-.sns{
-    .fab{
-        font-size:1.5em;
-        @include mq($phoneLandscape){
-            padding-right: $padding/2;
-        }
-    }
-    @include flex-layout-row;
-    width: 60%;
-    @include margin-center;
-    padding: 30px;
-}
-
-//social-wrapper styling
-.social-wrapper {
-    @include mq($phoneLandscape){
-   
-    border-top:1px solid black;
-    border-bottom:1px solid black;  
-    .social-container{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        max-width: 1200px;
-        @include margin-center;
-        line-height: 1;
-        align-items: center;
-    }
-    .sns{
-        order:1;
-        justify-content: flex-start;
-        margin: 0;
-        padding-left: $padding;
-    }
-    .subscribe{
-        order:2;
-        padding: 20px 30px;
-        border-bottom: none;
-        h1{
-            font-size: 1em;
-            text-align: left;
-        }
-    }
-}
     
+
+    //sns styling
+    .sns{
+        .fab{
+            font-size:1.5em;
+            @include mq($phoneLandscape){
+                padding-right: $padding/2;
+            }
+        }
+        @include flex-layout-row;
+        width: 60%;
+        @include margin-center;
+        padding: 30px;
+    }
+
+    //social-wrapper styling
+    .social-wrapper {
+        @include mq($phoneLandscape){
+    
+        border-top:1px solid black;
+        border-bottom:1px solid black;  
+        .social-container{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            max-width: 1200px;
+            @include margin-center;
+            line-height: 1;
+            align-items: center;
+        }
+        .sns{
+            order:1;
+            justify-content: flex-start;
+            margin: 0;
+            padding-left: $padding;
+        }
+        .subscribe{
+            order:2;
+            padding: 20px 30px;
+            border-bottom: none;
+            h1{
+                font-size: 1em;
+                text-align: left;
+            }
+        }
+    }
+
 }
