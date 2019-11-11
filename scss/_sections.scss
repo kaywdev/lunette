@@ -28,7 +28,6 @@
             }
             
                 @include mq($phoneLandscape){
-                        display: grid;
                         padding-top: 30px;
                         grid-template-columns: 300px 300px;
                         grid-gap: 10px;
@@ -38,8 +37,6 @@
                             margin: 0;
                         }
                         .choice{
-                            max-width:250px;
-                            height: 130px;
                             line-height: 130px;
                            
                         }
@@ -127,6 +124,13 @@
        background-image: url(../images/home/m-home-senior-guy.jpg);
        @include bg-img;
        background-position: center top;
+
+        @include mq($phoneLandscape){
+            height: 45vh;
+        }
+       @include mq($tabletLandscape){
+        background-image: url(../images/home/home-senior-guy.jpg);
+       }
     }
     article{
         padding: $padding;
@@ -136,17 +140,28 @@
             font-size: 1.3em;
             text-align: center;
         }
+        @include mq($phoneLandscape){
+            @include gradient(-90deg, $list2);
+        }
     }
     @include mq($phoneLandscape){
-        display: flex;
-    .article-img{
-        width:50%;
-        height: 400px; /*it should be 100% for bg-image*/
-    }
+        display: grid;
+        grid-template-columns: 50% 50%;
+   
     article{
-        width:50%;
         padding: 20px 30px;
+        @include mq($tabletLandscape){
+            position: absolute;
+            width: 50%;
+            height: 36vh;
+            right: 0;
+            top: 4vh;
+        }
     }
+    }
+    @include mq($tabletLandscape){
+        grid-template-columns: 60% 40%;
+        position: relative;
     }
 }
 
@@ -154,8 +169,8 @@
 .customize{
     padding-bottom: $padding;
     .gls-slide{
-        width:350px;
-        height: 150px;
+        width:100%;
+        height: 300px;
        background-image: url(../images/home/home-custom-pink.jpg);
        @include bg-img;
        @include margin-center;
@@ -177,7 +192,9 @@
         }
     }
     @include mq($tabletLandscape){
-        display:flex;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
     }
 }
 
@@ -245,20 +262,25 @@
             height: 280px;
            background-image: url(../images/home/home-location.jpg);
            @include bg-img;
+           background-size: contain;
+
+           @include mq($phoneLandscape){
+               width:85%;
+               margin: 35px;
+           }
         }
         .location-text{
             padding: $padding;
+
+            @include mq($phoneLandscape){
+                order:2;
+            }
         }
         @include mq($phoneLandscape){
-            display: flex;
-            padding-bottom:$padding;
-            .location-img{
-                width:50%;
-                height: 330px;
-            }
-            .location-text{
-                width:50%;
-            }
+            display: grid;
+            grid-template-columns: 50% 50%;
+            align-items: center;
+            padding: 30px;
         }
     }
 //styles styling

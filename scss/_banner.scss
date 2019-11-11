@@ -1,7 +1,13 @@
 .banner{
+    position: relative;
     @include mq($phoneLandscape){
-        display:flex;
-         }
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+     }
+     @include mq($desktopLarge){
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr;
+     }
 }
 
 .banner-img {
@@ -10,11 +16,18 @@
     background-image: url(../images/home/m-home-banner-girl.jpg);
     @include bg-img;
     background-position: 35% 50%;
+    @include mq($phoneLandscape){
+        order: 2;
+    }
     @include mq($tabletLandscape){
         height:400px;
     }
     @include mq($desktopMedium){
         height:500px;
+    }
+    @include mq($desktopLarge){
+        background-image: url(../images/home/home-banner-girl.jpg);
+        height: 60vh;
     }
 }
 
@@ -32,27 +45,53 @@
     }
 }
 
-.banner-text {
-    padding: $padding 40px;
+.banner-wrapper{
     background-color: #02D9FE;
-    h1{
-        font-size: 1.5em;
+    .banner-text {
+        padding: $padding 40px;
+        h1{
+            font-size: 1.5em;
+        }
+        
+        @include mq($phoneLandscape){
+            line-height: 1.2;
+            align-self: end;
+            justify-self: center;
+            padding: 30px 20px;
+        }
+        @include mq($desktopLarge){
+            width:100%;
+            text-align: center;
+        }
     }
-    
+    .banner-btn{
+        width:100%;
+        text-align: center;
+        background-color: $brand-color;
+        padding:20px 0;
+        a{
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: uppercase;
+        
+        }
+        @include mq($phoneLandscape){
+            width: 60%;
+            height: 60px;
+            justify-self: center;
+        } @include mq($desktopLarge){
+            justify-self: center;
+        }
+    }
     @include mq($phoneLandscape){
-        width:50%;
-        line-height: 0.9;
+        display:grid;
+
     }
-}
-.banner-btn{
-    width:100%;
-    text-align: center;
-    background-color: $brand-color;
-    padding:20px 0;
-    a{
-    text-decoration: none;
-    color: #ffffff;
-    text-transform: uppercase;
-    
+    @include mq($desktopLarge){
+        position: absolute;
+        top: 10vh;
+         left: 30vw;
+         height: 40vh;
+         width: 20vw;
     }
 }

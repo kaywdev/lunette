@@ -21,6 +21,11 @@ header {
     .m-icon{
         @include m-icon;
         @include bg-img;
+        background-size: contain;
+        @include mq($phoneLandscape){
+            width:30px;
+            height: 30px;;
+        }
     }
 
     .shopping{
@@ -28,7 +33,7 @@ header {
     }
    
     .search{
-        background-image:url(../images/search-icon.svg); 
+        background-image:url(../images/svg-icons/search.svg); 
     }
 
     .search-bar{
@@ -53,14 +58,14 @@ header {
         }
     
     .location-icon{
-        background-image:url(../images/location.svg); 
+        background-image:url(../images/svg-icons/location.svg); 
         display:none;
         @include mq($phoneLandscape){
             display:block;
        }
     }
     .account{
-        background-image:url(../images/account.svg); 
+        background-image:url(../images/svg-icons/sing-in.svg); 
         display:none;
         @include mq($phoneLandscape){
             display:block;
