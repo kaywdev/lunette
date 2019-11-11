@@ -7,53 +7,17 @@
     border: none;
     padding: 0;
     cursor: pointer;
+    justify-self: start;
 
     .hamburger-content {
         display: block;
-        height: 24px;
+        height: 32px;
+        background-image: url(../images/svg-icons/hamburger-open.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 
-    .text {
-        @include visually-hidden;
-    }
-
-    .bar {
-        $transition: all 0.3s ease-in-out;
-        $bar-height: 4px;
-        @mixin bar($pos-neg: '') {
-            content: "";
-            width: 100%;
-            height: $bar-height;
-            top: #{$pos-neg}10px;
-            left: 0;
-            background-color: black;
-            position: absolute;
-            transition: $transition;
-            .show & {
-                top: 0;
-                transform: rotate(#{$pos-neg}45deg);
-            }
-        }
-
-        display: block;
-        height: $bar-height;
-        width: 100%;
-        position: relative;
-        top: 10px;
-        transition: $transition;
-        background-color: black;
-
-        .show & {
-            background-color: transparent;
-        }
-
-        &:after {
-            @include bar;
-        }
-        &:before {
-            @include bar('-');
-        }
-    }
+   
 
     &:focus,
     .hamburger-content:focus {

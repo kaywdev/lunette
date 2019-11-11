@@ -1,16 +1,15 @@
 // Header styles
 header {
     // background-color: $brand-color;
-    padding: $padding/2 $padding;
+    padding: $padding/2 $padding 0;
     align-items: center;
     position: relative;
 
     h1 {
         @include flatten;
-        // color: $text-color-light;
-        font-size: 1.6em;
+        width: 3.5em;
         @include mq($phoneLandscape){
-            text-align: center;;
+            text-align: center;
         }
        
     }
@@ -25,7 +24,7 @@ header {
     }
 
     .shopping{
-        background-image:url(../images/shopping-bag.svg); 
+        background-image:url(../images/svg-icons/shopping.svg); 
     }
    
     .search{
@@ -70,10 +69,11 @@ header {
     
 
     .top-header{
-        display:flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
         width:100%;
-        padding: 15px 0;
         @include mq($phoneLandscape){
          display:grid;
          grid-template-columns: 1fr 200px 1fr;
@@ -116,6 +116,7 @@ header {
      }
 
      .icon3{
+         justify-self: end;
         @include mq($phoneLandscape){
             display: flex;
             justify-content: flex-end;
