@@ -4,11 +4,15 @@
   @include margin-center;
     text-align: center;
     padding: 10px;
-    border: 1px solid black;
     border-radius: $border-radius;
-
+    @include gradient(90deg, $list3);
+    // &:before{
+    //     content: "";
+    //     opacity: 0.5;
+    // }
     a{
         text-decoration: none;
+        opacity: 1;
     }
 }
 

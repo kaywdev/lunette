@@ -314,10 +314,10 @@
         }
         .submit-group{ 
             input{
-                background-color: black;
+                @include gradient(90deg, $list3);
                 color:white;
-                border-radius: $border-radius/2;
                 margin-left:20px;
+                border: none;
             }
         }
     }
