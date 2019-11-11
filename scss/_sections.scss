@@ -1,20 +1,32 @@
 //gls-choice styling
 .gls-choice{
-    padding: 30px;
+    padding: 50px $padding $padding;
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-content: center;
+
             .choice{
-                width: 100%;
-                height: 100px;
-                line-height: 100px;
-                background-color: $img-bg-color;
-                @include margin-center;
-                border-radius: $border-radius;
+                text-align: center;
+                .gls-img{
+                    @include bg-img;
+                    @include margin-center;
+                }
+                .eg-img{
+                    width: 250px;
+                    height: 80px;
+                    background-image: url(../images/home/home-eyeglasses.jpg);
+                }
+                .sg-img{
+                    background-image: url(../images/home/home-sunglasses.jpg);
+                    width: 220px;
+                    height: 80px;
+                }
             }
-            .eg{
+            .eg,.sg{
                 margin-bottom: 30px;
             }
-            h2 {
-                padding-left: $padding;
-            }
+            
                 @include mq($phoneLandscape){
                         display: grid;
                         padding-top: 30px;
@@ -111,12 +123,17 @@
 .article{
     .article-img{
         width:100%;
-        height: 200px;
-        background-color: $img-bg-color;
+        height: 400px;
+       background-image: url(../images/home/m-home-senior-guy.jpg);
+       @include bg-img;
+       background-position: center top;
     }
     article{
         padding: $padding;
+        @include gradient(180deg, $list2);
+        color:$text-color-light;
         h1{
+            font-size: 1.3em;
             text-align: center;
         }
     }
@@ -137,12 +154,21 @@
 .customize{
     padding-bottom: $padding;
     .gls-slide{
-        width:100%;
-        height: 250px;
-        background-color: $img-bg-color;
+        width:350px;
+        height: 150px;
+       background-image: url(../images/home/home-custom-pink.jpg);
+       @include bg-img;
+       @include margin-center;
+       margin-top: 45px;
+       margin-bottom: 20px;
     }
     .cstm-text{
         padding:$padding;
+        text-align: center;
+            p{
+                color: $brand-color;
+                padding-bottom: 15px;
+            }
         @include mq($phoneLandscape){
             max-width: 500px;
             @include margin-center;
@@ -157,9 +183,23 @@
 
 //benefits styling
     .benefits{
+        @include gradient(135deg, $list1);
         padding: 0 $padding;
         h1, h2{
             text-align: center;
+            margin: 0;
+        }
+        h1{
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        h2{
+            color: $brand-ppl-color;
+            font-size: 1.2em;
+        }
+        .title-btm-line{
+            @include title-underline;
+            padding-bottom: 20px;
         }
         .benefit{
             padding: $padding/2 0;
@@ -194,11 +234,17 @@
     .location{
         h1{
             text-align: center;
+            margin-bottom: 10px;
+        }
+        .title-btm-line{
+            @include title-underline;
+            padding-bottom: 20px;
         }
         .location-img{
             width:100%;
-            height: 200px;
-            background-color: $img-bg-color;
+            height: 280px;
+           background-image: url(../images/home/home-location.jpg);
+           @include bg-img;
         }
         .location-text{
             padding: $padding;
@@ -291,7 +337,6 @@
 //subscribe styling
     .subscribe{
         padding: $padding;
-        border-bottom:1px solid black;
         h1{
             text-align: center;
         }
@@ -306,9 +351,10 @@
                 outline: none;
                 border-bottom: 2px solid black;
             }
-            #email{
+            input{
                 width:100%;
                 border: 0;
+                background-color: #F6F6F6;
             }
             
         }
@@ -318,6 +364,9 @@
                 color:white;
                 margin-left:20px;
                 border: none;
+                padding: 8px 5px;
+                font-size: 0.6em;
+                text-transform: uppercase;
             }
         }
     }
@@ -328,6 +377,7 @@
     .sns{
         .fab{
             font-size:1.5em;
+            color: $brand-color;
             @include mq($phoneLandscape){
                 padding-right: $padding/2;
             }
@@ -340,6 +390,7 @@
 
     //social-wrapper styling
     .social-wrapper {
+        background-color: #F6F6F6;
         @include mq($phoneLandscape){
     
         border-top:1px solid black;

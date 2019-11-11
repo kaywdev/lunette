@@ -1,6 +1,7 @@
 // Footer Styles
 footer {
     padding: 0px $padding $padding;
+    background-color: #F6F6F6;
     p {
         @include flatten;
     }
@@ -12,7 +13,7 @@ footer {
         padding: 0 0 $padding/2;
 
         a{
-            font-size: 1em;
+            font-size: 0.8em;
         }
         @include mq($phoneLandscape){
 

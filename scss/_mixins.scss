@@ -106,3 +106,10 @@
     height: 45px;
 }
 
+//under-line for title
+@mixin title-underline{
+    width: 100px;
+    border-top: 1px solid $brand-color;
+    @include margin-center;
+}
+
