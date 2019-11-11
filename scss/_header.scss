@@ -127,6 +127,6 @@ header {
 
      @include mq($phoneLandscape){
          max-width: 1200px;
-         @include margin-center;
+         @include margin-center
      }
 }
