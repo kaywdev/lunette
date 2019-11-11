@@ -113,3 +113,9 @@
     @include margin-center;
 }
 
+//grid 50%-50% columns
+@mixin grid50{
+    display:grid;
+    grid-template-columns: 50% 50%;
+}
+
