@@ -98,7 +98,9 @@
                        
                         @include mq($phoneLandscape){
                           @include grid50;
+                          grid-gap: 10px;
                            justify-content: center;
+
                         }
                         @include mq($tabletLandscape){
                             grid-template-columns: repeat(3, 33%);
