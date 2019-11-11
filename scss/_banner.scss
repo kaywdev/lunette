@@ -143,4 +143,18 @@
     @include mq($desktopMedium){
         height: 60vh;
     }
+
 }
+  //About.html banner styling
+   .about-banner{
+    .about-bn-img{
+        background-image: url(../images/home/home-banner-guy.jpg);
+        @include bg-img;
+        background-position: 91% 50%;
+    }
+    .about-bn-wrapper{
+        background-color: #2C223D;
+        color: $text-color-light;
+    }
+}
+
