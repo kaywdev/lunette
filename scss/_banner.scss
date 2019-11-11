@@ -52,17 +52,21 @@
         h1{
             font-size: 1.5em;
         }
-        
+        .product-bn-text{
+            align-self: center;
+        }
         @include mq($phoneLandscape){
             line-height: 1.2;
             align-self: end;
             justify-self: center;
             padding: 30px 20px;
+            
         }
         @include mq($desktopLarge){
             width:100%;
             text-align: center;
         }
+         
     }
     .banner-btn{
         width:100%;
@@ -94,4 +98,31 @@
          height: 40vh;
          width: 20vw;
     }
+}
+
+//products.html Styling
+.p-banner{
+    grid-template-columns: 60% 40%;;
+.product-bn-img{
+    background-image: url(../images/product/product-banner.jpg);
+    order:1;
+    @include mq($phoneLandscape){
+        height: 30vh;
+    } 
+}
+
+.product-bn-wrapper{
+    background-color:#CEFDD2;
+    color:$brand-ppl-color;
+    text-align: center;
+        @include mq($phoneLandscape){
+            order:2;
+            display: grid;
+        }
+       
+    }  
+    
+    @include mq($phoneLandscape){
+        height: 30vh;
+    } 
 }

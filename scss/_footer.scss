@@ -2,6 +2,12 @@
 footer {
     padding: 0px $padding $padding;
     background-color: #F6F6F6;
+    .container{
+        @include mq($phoneLandscape){
+            max-width:1200px;
+            @include margin-center;
+        }
+    }
     p {
         @include flatten;
     }
@@ -32,8 +38,5 @@ footer {
         }
         
     }
-    @include mq($phoneLandscape){
-        max-width:1200px;
-        @include margin-center;
-    }
+    
 }

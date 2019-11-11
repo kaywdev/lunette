@@ -129,6 +129,7 @@
         }
        @include mq($tabletLandscape){
         background-image: url(../images/home/home-senior-guy.jpg);
+        height: 70vh;
        }
     }
     article{
@@ -154,6 +155,9 @@
             height: 36vh;
             right: 0;
             top: 4vh;
+        }
+        @include mq($tabletLandscape){
+            height: 62vh;;
         }
     }
     }
