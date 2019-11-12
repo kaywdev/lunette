@@ -18,6 +18,12 @@ $light-navy:rgba(86,89,141,1);
 $cream:rgba(246, 255, 233, 0.9);
 $btn-pink:rgba(251,39,184,1);
 $btn-orange:rgba(255,165,63,1);
+$lense-blue: rgba(119,146,175,1);
+$lense-white: rgba(255,255,255,1);
+$lense-pink:rgba(255,157,126,1);
+$lense-black:rgba(0,0,0,1);
+
+
 
 
 /* GRADIENT LISTS
@@ -25,6 +31,10 @@ $btn-orange:rgba(255,165,63,1);
 $list1: $pink 0%, $light-purple 54%, $purple 100%; 
 $list2: $navy 0%, $navy2 3%, $light-navy 78%, $cream 100%;
 $list3: $btn-pink 0%, $btn-orange 100%;
+$lense1: $lense-blue 0%, $lense-white 100%;
+$lense2: $lense-pink 0%, $lense-white 100%;
+$lense3: $lense-black 0%, $lense-white 100%;
+
 
 // background: rgb(251,39,184);
 // background: linear-gradient(90deg, rgba(251,39,184,1) 0%, rgba(255,165,63,1) 100%);
