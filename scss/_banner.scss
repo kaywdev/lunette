@@ -50,7 +50,12 @@
     .banner-text {
         padding: $padding 40px;
         h1{
-            font-size: 2em;
+            font-size: 1.7em;
+            letter-spacing: $hd-letterspace;
+        }
+        p {
+            font-family: $century;
+            font-size: 0.9em;
         }
         @include mq($phoneLandscape){
             line-height: 1.2;
