@@ -2,6 +2,7 @@
 footer {
     padding: 0px $padding $padding;
     background-color: #F6F6F6;
+    text-transform: uppercase;
     .container{
         @include mq($phoneLandscape){
             max-width:1200px;
