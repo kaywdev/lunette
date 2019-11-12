@@ -1,0 +1,167 @@
+/* Contact page styles */
+
+// Typography Styles
+// Google Fonts
+@import url("https://use.typekit.net/xhq6yxp.css");
+
+// Font Variables
+$futura: 'Futura-pt', sans-serif;
+$condor: 'Condor', sans-serif;
+$century: 'century-gothic', sans-serif;
+$letterspace: 0.3px; 
+
+// Fieldset reset
+fieldset {
+    margin: 0;
+    padding: $padding;
+    border: none;
+}
+
+// Styles
+
+.contact p {
+    font-family: $futura;
+    font-weight: 400;
+    text-align: center;
+    // margin-top: 30px;
+
+}
+
+.contact {
+    p:first-child{
+        padding: $padding;
+    }
+    p:not(:first-child){
+        padding-top: $padding/4;
+    }
+}
+.contact span {
+    color: $btn-pink
+}
+
+
+//button Styling
+.cta-btn {
+    width: 200px;
+    @include margin-center;
+    text-align: center;
+    padding: 10px;
+    background-color: $brand-navy-color;
+
+    text-decoration: none;
+    color:$text-color-light;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-family: $futura;
+    align-content: center;
+    letter-spacing: $letterspace;
+}
+
+input, select, textarea {
+    outline: none;
+}
+
+.cf {
+    max-width: 700px;
+    margin: 20px auto;
+
+    input, textarea, select {
+        border: 0;
+        outline: 0;
+        padding: 0.5em 0;
+        margin-bottom: 30px;
+        width: 100%;
+        resize: none;
+        font-size: 1em;
+        font-family: $futura;
+        letter-spacing: $letterspace;
+        border-bottom: 1px solid $brand-color;
+    }
+
+    textarea {
+        border: 1px solid $brand-color;
+        padding: 0.5em;
+        margin-top: 10px;
+
+    }
+
+    label {
+        display: block;
+        font-size: 1.1em;
+        letter-spacing: $letterspace; 
+        font-family: $condor;
+    }
+
+    select {
+        color: gray;
+        background-color: white;
+        border-radius: none;
+        -moz-apperance: none;
+        -webkit-appearance: none;
+        background: url(..images/svg-icons/slide-arrow.svg) no-repeat right;
+        outline: none;
+        // border-bottom: 1px solid $brand-color;
+    }
+
+}
+
+
+
+/*
+.c-container form{
+    position: relative;
+    @include mq($phoneLandscape){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+     }
+     @include mq($desktopLarge){
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr;
+     }
+}
+*/
+
+
+// //contact.html banner styling
+//    .contact-banner{
+//     .contact-bn-img{
+//         background-image: url(../images/contact/contact-banner-man.jpg);
+//         @include bg-img;
+//         background-position: 91% 50%;
+//     }
+//     .contact-bn-wrapper{
+//         background-color: #00005B;
+//         color: $text-color-light;
+//     }
+// }
+
+
+
+//
+// @import url("https://use.typekit.net/xhq6yxp.css");
+// $title-font: font;
+
+// font-family: condor, sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// <<Futura PT Medium... body title font>>
+// font-family: futura-pt, sans-serif;
+// font-weight: 500;
+// font-style: normal;
+
+
+// <<Futura PT Book ... body p font >>
+// font-family: futura-pt, sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+
+// <<Century Gothic Pro Regular... banner sub title>>
+// font-family: century-gothic, sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// label {
+//     font-family: $heading-font;
+// }
