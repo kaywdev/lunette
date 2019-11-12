@@ -29,7 +29,7 @@ $lense-black:rgba(0,0,0,1);
 /* GRADIENT LISTS
 ============================================= */
 $list1: rgba($pink,0.5) 0%, rgba($light-purple, 0.5) 54%, rgba($purple,0.5) 100%; 
-$list2: $navy 0%, $navy2 3%, $light-navy 78%, $cream 100%;
+$list2: $navy 0%, $navy2 3%, $light-navy 78%, rgba($cream, 0.01) 100%;
 $list3: $btn-pink 0%, $btn-orange 100%;
 $list4: rgba($btn-pink,0.4) 0%, rgba($btn-orange, 0.4) 100%;
 $lense1: $lense-blue 0%, $lense-white 100%;
