@@ -108,7 +108,7 @@
 
 //under-line for title
 @mixin title-underline{
-    width: 100px;
+    width: 50px;
     border-top: 1px solid $brand-color;
     @include margin-center;
 }
