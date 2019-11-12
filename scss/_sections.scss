@@ -55,18 +55,22 @@
     //products.html
     .p-gls-choice{
                 padding: $padding*2 $padding;
+                padding-bottom: $padding;
+                .eg-wrapper,
+                .sg-wrapper {
+                    padding-bottom: $padding;
+                }
                 .choice{
                     @include mq($phoneLandscape){
                         max-width: 100%;
                     }
                 }
                 .p-choice{
-                    // height:70px;
                     margin: 0;
-                    // h2{
-                    //     line-height: 70px;   
-                    // }
-                }   //end of p-choice
+                    h1{
+                        margin-bottom: 10px;
+                    }
+                }
                     p{
                     width: 90%;
                     margin: 0 auto;
@@ -78,7 +82,6 @@
                 }
 
                 
-
                 .p-container{
                     padding: $padding;
                     .product-wrapper{
