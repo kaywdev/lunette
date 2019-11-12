@@ -99,61 +99,7 @@ input, select, textarea {
 
 
 
-/*
-.c-container form{
-    position: relative;
-    @include mq($phoneLandscape){
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-     }
-     @include mq($desktopLarge){
-         grid-template-columns: 1fr;
-         grid-template-rows: 1fr;
-     }
-}
-*/
-
-
-// //contact.html banner styling
-//    .contact-banner{
-//     .contact-bn-img{
-//         background-image: url(../images/contact/contact-banner-man.jpg);
-//         @include bg-img;
-//         background-position: 91% 50%;
-//     }
-//     .contact-bn-wrapper{
-//         background-color: #00005B;
-//         color: $text-color-light;
-//     }
-// }
 
 
 
-//
-// @import url("https://use.typekit.net/xhq6yxp.css");
-// $title-font: font;
 
-// font-family: condor, sans-serif;
-// font-weight: 400;
-// font-style: normal;
-
-// <<Futura PT Medium... body title font>>
-// font-family: futura-pt, sans-serif;
-// font-weight: 500;
-// font-style: normal;
-
-
-// <<Futura PT Book ... body p font >>
-// font-family: futura-pt, sans-serif;
-// font-weight: 400;
-// font-style: normal;
-
-
-// <<Century Gothic Pro Regular... banner sub title>>
-// font-family: century-gothic, sans-serif;
-// font-weight: 400;
-// font-style: normal;
-
-// label {
-//     font-family: $heading-font;
-// }
