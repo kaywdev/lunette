@@ -1,12 +1,7 @@
 // Typography Styles
-body {
-    font-family: $body-font;
-    line-height: $line-height;
-}
+@import url("https://use.typekit.net/xhq6yxp.css");
 
-h1, h2, h3, nav a, table {
-    font-family: $heading-font;
-}
+// Temp.. need to move to variables
 
 // Font Variables
 $futura: 'Futura-pt', sans-serif;
@@ -15,3 +10,61 @@ $century: 'century-gothic', sans-serif;
 $letterspace: 0.3px; 
 
 
+body {
+    font-family: $futura;
+    line-height: $line-height;
+}
+
+h1 {
+    font-family: $condor;
+    letter-spacing: $letterspace;
+}
+
+// h1, h2, h3, nav a, table {
+//     font-family: $heading-font;
+// }
+
+// a, input, p {
+//     font-family: $futura;
+//     letter-spacing: $letterspace;
+// }
+
+ul a {
+    font-family: $futura;
+    letter-spacing: $letterspace;
+    font-weight: 500;
+}
+
+.gls-choice {
+    p {
+       text-align: center; 
+    }
+}
+
+// @import url("https://use.typekit.net/xhq6yxp.css");
+// $title-font: font;
+
+// font-family: condor, sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// <<Futura PT Medium... body title font>>
+// font-family: futura-pt, sans-serif;
+// font-weight: 500;
+// font-style: normal;
+
+
+// <<Futura PT Book ... body p font >>
+// font-family: futura-pt, sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+
+// <<Century Gothic Pro Regular... banner sub title>>
+// font-family: century-gothic, sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// label {
+//     font-family: $heading-font;
+// }
