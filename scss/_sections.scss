@@ -10,17 +10,21 @@
                 text-align: center;
                 .gls-img{
                     @include bg-img;
-                    @include margin-center;
-                }
-                .eg-img{
                     width: 250px;
                     height: 80px;
+                    @include margin-center;
+
+                    @include mq($tabletLandscape){
+                        width: 300px;
+                         height: 100px;
+                    }
+                }
+                .eg-img{
                     background-image: url(../images/home/home-eyeglasses.jpg);
                 }
                 .sg-img{
                     background-image: url(../images/home/home-sunglasses.jpg);
-                    width: 220px;
-                    height: 80px;
+                    background-position-y: 60%;
                 }
             }   //  end of .choice
             .eg,.sg{
@@ -35,6 +39,7 @@
                         
                         h2{
                             margin: 0;
+                            font-size: 1.8em;
                         }
                         .choice{
                             line-height: 130px;
@@ -140,10 +145,11 @@
         @include gradient(180deg, $list2);
         color:$text-color-light;
         h1{
-            font-size: 1.3em;
+            font-size: 1.5em;
             text-align: center;
+            padding-top: 20px;
         }
-        @include mq($phoneLandscape){
+        @include mq($tabletLandscape){
             @include gradient(-90deg, $list2);
         }
     }
@@ -160,9 +166,17 @@
             top: 4vh;
         }
         @include mq($tabletLandscape){
-            height: 62vh;;
+            height: 62vh;
+            display: grid;
+            align-items: end;
         }
-    }
+        p{
+            align-self: start;
+            @include mq($tabletLandscape){
+            font-size: 1.2em;
+        }
+        }
+    }   //end of article
     }
     @include mq($tabletLandscape){
         grid-template-columns: 60% 40%;
@@ -229,23 +243,53 @@
             padding-top: $padding;
         }
         .bf-icon{
-            width:80px;
+            width:120px;
             height: 80px;
             @include margin-center;
-            background-color: $img-bg-color;
+           @include bg-img;
+            background-size: contain;
         }
+        .design-ic{
+            background-image: url(../images/svg-icons/benefit-01.svg);
+        }
+        .shipping-ic{
+            background-image: url(../images/svg-icons/benefit-02.svg);
+        }
+        .cool-ic{
+            background-image: url(../images/svg-icons/benefit-03.svg);
+        }
+        
         @include mq($phoneLandscape){
           .benefits-wrapper{
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
                 .benefit{
-                    @include flex-center;
+                    .benefit-text{
                     h2{
                         font-size:1em;
+                        @include mq($phoneLandscape){
+                            font-size: 1.1em;
+                            padding-bottom: 20px;
+                        }
+                        @include mq($tabletLandscape){
+                            font-size: 1.5em;
+                        }
                     }
                     p {
                         padding: 0px 20px;
                         margin-top: 0;
+                        @include mq($tabletLandscape){
+                            font-size: 1.2em;
+                            justify-self: center;
+                        }
                     }
+
+                    @include mq($tabletLandscape){
+                        display: grid;
+                        justify-content: center;;
+                    }
+
+                } //end of benefit-text
                 } //  end of .benefits
             }    //  end of .benefits-wrapper
         }   //  end of .benefis tablet ver
@@ -704,6 +748,7 @@
     .about-article{
         h1{
          text-align: center;
+         font-size: 2em;;
         }
     }   // end of about-article
 
@@ -723,17 +768,28 @@
         .process-container{
             .process-wrapper{
                 .process-img{
-                    width: 315px;
+                    width: 100%;
                     height: 300px;
-                    background-color:$img-bg-color;
+                    @include bg-img;
                     @include mq($phoneLandscape){
-                        width: 100%;
                         height: 15vh;
                     }
                     @include mq($tabletLandscape){
                         height: 30vh;
-                    }   
+                    } 
                 }  // end of .process-img
+                    .planning{
+                        background-image: url(../images/about/process-01.jpg);
+                    }  
+                    .custermizing{
+                        background-image: url(../images/about/process-02.jpg);
+                    }
+                    .making{
+                        background-image: url(../images/about/process-03.jpg);
+                    }
+                    .sending{
+                        background-image: url(../images/about/process-04.jpg);
+                    }
                 h2{
                     text-align: center;
                     padding-top: $padding;

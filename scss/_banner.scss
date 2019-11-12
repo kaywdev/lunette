@@ -50,7 +50,7 @@
     .banner-text {
         padding: $padding 40px;
         h1{
-            font-size: 1.5em;
+            font-size: 2em;
         }
         @include mq($phoneLandscape){
             line-height: 1.2;
@@ -148,9 +148,9 @@
   //About.html banner styling
    .about-banner{
     .about-bn-img{
-        background-image: url(../images/home/home-banner-guy.jpg);
+        background-image: url(../images/about/m-about-banner-women.jpg);
         @include bg-img;
-        background-position: 91% 50%;
+        background-position: 43% 50%;
     }
     .about-bn-wrapper{
         background-color: #2C223D;
