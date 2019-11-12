@@ -157,3 +157,14 @@
     }
 }
 
+
+// contact.html banner styling
+.c-banner {
+    .contact-bn-img {
+        background-image: url(../images/contact/contact-banner-man.jpg);
+    }
+    .contact-bn-wrapper{
+    background-color: $brand-navy-color;
+    color: $text-color-light;
+    }
+}

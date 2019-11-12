@@ -4,11 +4,6 @@
 // Google Fonts
 @import url("https://use.typekit.net/xhq6yxp.css");
 
-// Font Variables
-$futura: 'Futura-pt', sans-serif;
-$condor: 'Condor', sans-serif;
-$century: 'century-gothic', sans-serif;
-$letterspace: 0.3px; 
 
 // Fieldset reset
 fieldset {
@@ -18,13 +13,10 @@ fieldset {
 }
 
 // Styles
-
 .contact p {
     font-family: $futura;
     font-weight: 400;
     text-align: center;
-    // margin-top: 30px;
-
 }
 
 .contact {
