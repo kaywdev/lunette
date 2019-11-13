@@ -238,6 +238,7 @@
 //customize styling
 .customize{
     padding-bottom: $padding;
+    /* Temporary comment out. moved to check _slider.scss 
     .gls-slide{
         width:100%;
         height: 300px;
@@ -247,6 +248,7 @@
        margin-top: 45px;
        margin-bottom: 20px;
     }
+    */
     .cstm-text{
         padding:$padding;
         text-align: center;
