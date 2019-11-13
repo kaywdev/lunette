@@ -26,20 +26,33 @@
 }
 
 .img-comp-img img {
-  display: block;
-  vertical-align: middle;
-height: 200px;
-max-width: 300px;
+    display: block;
+    vertical-align: middle;
+    height: 200px;
+    max-width: 300px;
 }
 
 .img-comp-slider {
-  position: absolute;
-  z-index: 9;
-  cursor: ew-resize;
-  /*set the appearance of the slider:*/
-  width: 40px;
-  height: 40px;
-  background-color: #2196F3;
-  opacity: 0.7;
-  border-radius: 50%;
+    position: absolute;
+    z-index: 9;
+    cursor: ew-resize;
+    /*set the appearance of the slider:*/
+    width: 40px;
+    height: 40px;
+    background-color: $brand-color;
+    opacity: 0.7;
+    border-radius: 50%;
+
+    &:before {
+        content:"";
+        background-image: url(../images/slide-arrow-two-ways.svg);
+        background-repeat: no-repeat;
+        z-index: 100;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
 }
