@@ -119,3 +119,45 @@
     grid-template-columns: 50% 50%;
 }
 
+//hm-menu
+@mixin btn($left, $top) {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    top: $top;
+    left: $left;
+    transition-duration: 0.5s;
+  }
+  
+  @mixin icon($height, $width) {
+    transition-duration: 0.5s;
+    position: absolute;
+    height: $height;
+    width: $width;
+    top: 25px;
+    left:0;
+    background-color: black;
+  }
+  
+  @mixin icon-before($height, $width, $top, $left) {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: black;
+    content: "";
+    top: $top;
+    left: $left;
+  }
+  
+  @mixin icon-after($height, $width, $top, $left) {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: black;
+    content: "";
+    top: $top;
+    left:$left;
+  }
+
