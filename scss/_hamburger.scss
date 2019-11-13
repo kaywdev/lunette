@@ -19,24 +19,24 @@
     }
    
     .hm-btn{
-        @include btn(-5px, 16px);
+        @include btn(30px, 18px);
                 .hm-line{
                     @include icon(0px, 40px);
                 &:before{
-                    @include icon-before(2px, 40px, -25px);
+                    @include icon-before(2px, 40px, -25px, -19px);
                 }
                 &:after{
-                    @include icon-after(2px, 40px, -9px);
+                    @include icon-after(2px, 40px, -8px, -19px);
                 }
                 }
             .show &{
                 .hm-line{
                             transition: 0.5s;
                             &:before{
-                                transform: rotateZ(30deg) scaleX(1.05) translate(6px, 14px);
+                                transform: rotateZ(30deg) scaleX(1.05) translate(6px, 12px);
                             }
                             &:after{
-                              transform: rotateZ(-30deg) scaleX(1.05) translate(2px, 0px);
+                              transform: rotateZ(-30deg) scaleX(1.05) translate(0px, -4px);
                             }
                           }
             }
