@@ -848,7 +848,7 @@
     .about-article{
         h1{
          text-align: center;
-         font-size: 2em;;
+         font-size: 2em;
         }
     }   // end of about-article
 
@@ -857,10 +857,12 @@
         padding-top: $padding*2;
 
         h1{
-            font-size: 2em;
+            font-size: $title;
             text-align: center;
             margin-bottom: 10px;
         }
+
+
         .border{
             @include title-underline;
             padding-bottom: $padding;
@@ -893,17 +895,17 @@
                 h2{
                     text-align: center;
                     padding-top: $padding;
-                    font-size: 1.1em;
+                    // font-size: 1.1em;
                     color:$brand-color;
 
                     @include mq($tabletLandscape){
-                        font-size: 1.5em;
+                        font-size: 1.2em;
                     }
                 }
                 p{
                     @include mq($phoneLandscape){
-                        padding: 20px;
-                        font-size: 0.7em;
+                        padding: 5px;
+                        font-size: 0.8em;
                     }
                     @include mq($tabletLandscape){
                         font-size: 0.9em;

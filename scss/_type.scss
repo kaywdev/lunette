@@ -8,8 +8,15 @@ $futura: 'Futura-pt', sans-serif;
 $condor: 'Condor', sans-serif;
 $century: 'century-gothic', sans-serif;
 $letterspace: 0.4px; 
-$hd-letterspace: 1px;
+$hd-letterspace: 0.8px;
 
+// Font Size
+$title: 1.5em;
+
+h1, h2 {
+    font-style: normal;
+    font-weight: normal;
+}
 
 body {
     font-family: $futura;
@@ -19,6 +26,24 @@ body {
 h1 {
     font-family: $condor;
     letter-spacing: $letterspace;
+    font-weight: 500;
+}
+
+.subscribe {
+    h1 {
+        font-family: $futura;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: $hd-letterspace;
+        font-size: 1em;
+    }
+}
+
+.choice {
+    h2 {
+        font-family: $condor;
+        font-weight: 500;
+    }
 }
 
 // h1, h2, h3, nav a, table {
