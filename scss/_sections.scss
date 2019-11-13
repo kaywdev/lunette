@@ -753,8 +753,8 @@
                     .star-wrapper{
                         display: flex;
                         .star-img{
-                            width:30px;
-                            height:30px;
+                            width:20px;
+                            height:20px;
                             background-image: url("../images/star.png");
                             background-repeat: no-repeat;
                             background-size: cover;
@@ -790,7 +790,7 @@
                     margin-bottom: 5px;
                 }
                 p{
-                    width: 280px;
+                    // width: 280px;
                    @include margin-center;
                     text-align: center;
                     padding-bottom: 20px;
@@ -832,9 +832,13 @@
              }   //  end of .arrow-right
              .style-gallery{
                  .style-img {
+                        @include bg-img;
+                        @include margin-center;
                         width: 80%;
                         height: 200px;
-                        background-color: $img-bg-color;
+                        // background-color: $img-bg-color;
+                        background-image: url(../images/product/product-sg-05.jpg);
+                        background-repeat: no-repeat;
                         @include margin-center;
                         @include mq($phoneLandscape){
                             margin: 0;
