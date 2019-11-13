@@ -184,7 +184,7 @@
        background-position: center top;
 
         @include mq($phoneLandscape){
-            height: 45vh;
+            // height: 45vh;
         }
        @include mq($tabletLandscape){
         background-image: url(../images/home/home-senior-guy.jpg);
