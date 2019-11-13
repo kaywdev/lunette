@@ -11,12 +11,36 @@
 
     .hamburger-content {
         display: block;
-        height: 32px;
-        background-image: url(../images/svg-icons/hamburger-open.svg);
+        height: 16px;
+        background-image: url(../images/svg-icons/hamburger-gls.svg);
         background-repeat: no-repeat;
         background-size: contain;
+        margin-top: 30px;
     }
-
+   
+    .hm-btn{
+        @include btn(30px, 18px);
+                .hm-line{
+                    @include icon(0px, 40px);
+                &:before{
+                    @include icon-before(2px, 40px, -25px, 0);
+                }
+                &:after{
+                    @include icon-after(2px, 40px, -8px, 0);
+                }
+                }
+            .show &{
+                .hm-line{
+                            transition: 0.5s;
+                            &:before{
+                                transform: rotateZ(30deg) scaleX(1.05) translate(6px, 16px);
+                            }
+                            &:after{
+                              transform: rotateZ(-30deg) scaleX(1.05) translate(0px, 1px);
+                            }
+                          }
+            }
+        }
    
 
     &:focus,
