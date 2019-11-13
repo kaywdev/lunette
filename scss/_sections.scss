@@ -87,13 +87,13 @@
                     .product-wrapper{
                         text-align: center;
                         .p-img{
-                                width: 200px;
-                                height: 80px;
+                                width: 300px;
+                                height: 200px;
                                 @include bg-img;
                                 @include margin-center;
                                 @include mq($phoneLandscape){
-                                    width: 200px;
-                                    height: 100px;
+                                    width: 300px;
+                                    height: 200px;
                                  }
                          }  //  end of .p-img
 
