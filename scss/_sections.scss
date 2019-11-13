@@ -1,22 +1,24 @@
 //gls-choice styling
 .gls-choice{
-    padding: 50px $padding $padding;
+    padding: $padding*2 0 $padding 0;
     display: grid;
     grid-template-rows: auto;
     justify-items: center;
     align-content: center;
+    grid-gap: 20px;
+    margin-bottom: 0;
 
             .choice{
                 text-align: center;
                 .gls-img{
                     @include bg-img;
                     width: 250px;
-                    height: 80px;
+                    height: 180px;
                     @include margin-center;
 
                     @include mq($tabletLandscape){
-                        width: 300px;
-                         height: 100px;
+                        width: 250px;
+                         height: 180px;
                     }
                 }
                 .eg-img{
@@ -32,19 +34,16 @@
             }
             
                 @include mq($phoneLandscape){
-                        padding-top: 30px;
+                        // padding-top: 30px;
                         grid-template-columns: 300px 300px;
-                        grid-gap: 10px;
+                        grid-gap: 20px;
                         justify-content: center;
                         
                         h2{
-                            margin: 0;
-                            font-size: 1.8em;
+                            // margin-bottom: 30px;
+                            font-size: 1.5em;
                         }
-                        // .choice{
-                        //     line-height: 130px;
-                           
-                        // }
+
                         .eg{
                             margin-bottom: 0;
                            
