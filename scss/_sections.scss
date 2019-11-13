@@ -891,8 +891,11 @@
     // about-article 
     .about-article{
         h1{
-         text-align: center;
-         font-size: 2em;
+            text-align: center;
+            font-size: 1.7em;
+        }
+        p {
+            padding: 0px $padding;
         }
     }   // end of about-article
 
@@ -905,7 +908,6 @@
             text-align: center;
             margin-bottom: 10px;
         }
-
 
         .border{
             @include title-underline;
@@ -939,7 +941,7 @@
                 h2{
                     text-align: center;
                     padding-top: $padding;
-                    // font-size: 1.1em;
+                    font-size: 1.35em;
                     color:$brand-color;
 
                     @include mq($tabletLandscape){
