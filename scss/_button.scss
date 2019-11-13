@@ -4,8 +4,7 @@
   @include margin-center;
     text-align: center;
     padding: 10px;
-   background-color: $brand-color;
-  
+    background-color: $brand-color;
     
     a{
         text-decoration: none;
@@ -13,6 +12,7 @@
         color:$text-color-light;
         font-weight: 200;
         text-transform: uppercase;
+        letter-spacing: $letterspace;
     }
 }
 .see-more-btn{
