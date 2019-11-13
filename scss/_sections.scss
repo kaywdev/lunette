@@ -58,7 +58,7 @@
                 padding-bottom: $padding;
                 .eg-wrapper,
                 .sg-wrapper {
-                    padding-bottom: $padding;
+                    padding-bottom: $padding*2;
                 }
                 .choice{
                     @include mq($phoneLandscape){
