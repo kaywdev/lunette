@@ -121,8 +121,12 @@
 }
 
 .product-bn-wrapper{
+    color: $text-color-dark;
     background-color:#CEFDD2;
     text-align: center;
+        span {
+            color: $brand-ppl-color;
+        }
         @include mq($phoneLandscape){
             order:2;
             display: grid;
@@ -135,12 +139,7 @@
             height: 100%;
             width:100%;
         }
-        h1 {
-            color:$brand-ppl-color;
-        }
-        p {
-            color: black;
-        }
+
     }  
     
     @include mq($phoneLandscape){
