@@ -20,7 +20,7 @@
    
     .hm-btn{
         @include btn(-5px, 16px);
-                .hm-line1{
+                .hm-line{
                     @include icon(0px, 40px);
                 &:before{
                     @include icon-before(2px, 40px, -25px);
@@ -30,7 +30,7 @@
                 }
                 }
             .show &{
-                .hm-line1{
+                .hm-line{
                             transition: 0.5s;
                             &:before{
                                 transform: rotateZ(30deg) scaleX(1.05) translate(6px, 14px);
