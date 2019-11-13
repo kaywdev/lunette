@@ -122,7 +122,6 @@
 
 .product-bn-wrapper{
     background-color:#CEFDD2;
-    color:$brand-ppl-color;
     text-align: center;
         @include mq($phoneLandscape){
             order:2;
@@ -135,6 +134,12 @@
             position: initial;
             height: 100%;
             width:100%;
+        }
+        h1 {
+            color:$brand-ppl-color;
+        }
+        p {
+            color: black;
         }
     }  
     
