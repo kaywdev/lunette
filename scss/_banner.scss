@@ -79,6 +79,8 @@
         text-decoration: none;
         color: #ffffff;
         text-transform: uppercase;
+        letter-spacing: $hd-letterspace;
+        font-size: 0.9em;
         
         }
         @include mq($phoneLandscape){
