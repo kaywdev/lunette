@@ -23,20 +23,20 @@
                 .hm-line{
                     @include icon(0px, 40px);
                 &:before{
-                    @include icon-before(2px, 40px, -25px, -19px);
+                    @include icon-before(2px, 40px, -25px, 0);
                 }
                 &:after{
-                    @include icon-after(2px, 40px, -8px, -19px);
+                    @include icon-after(2px, 40px, -8px, 0);
                 }
                 }
             .show &{
                 .hm-line{
                             transition: 0.5s;
                             &:before{
-                                transform: rotateZ(30deg) scaleX(1.05) translate(6px, 12px);
+                                transform: rotateZ(30deg) scaleX(1.05) translate(6px, 16px);
                             }
                             &:after{
-                              transform: rotateZ(-30deg) scaleX(1.05) translate(0px, -4px);
+                              transform: rotateZ(-30deg) scaleX(1.05) translate(0px, 1px);
                             }
                           }
             }
