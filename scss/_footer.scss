@@ -11,9 +11,10 @@ footer {
     }
     p {
         @include flatten;
+        line-height: $line-height;
     }
     @include mq($phoneLandscape){
-        padding:$padding;
+        padding:$padding/2;
     }
     .footer-nav{
         @include flex-layout-row;
