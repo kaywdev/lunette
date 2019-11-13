@@ -120,114 +120,7 @@
 }  //  end of .p-gls-choice
 
 
-//products.html - sec suggestion
-.suggestion{
-    padding: $padding 0;
-    background-color: #fafafa;
-    .suggestion-text{
-        padding: 0 $padding;
-                h1{
-                    text-align: center;
-                    margin-bottom: 5px;
-                }
-                p{
-                    // width: 280px;
-                   @include margin-center;
-                    text-align: center;
-                    padding-bottom: 20px;
-                }
-                span{
-                    font-weight:bold;
-                    color: $brand-color;
-                }
-                .border{
-                    @include title-underline;
-                    @include margin-center;
-                    padding-bottom: $padding;
-                }
-        } //  end of .suggestion-text 
-    .styles-wrapper{
-        position: relative;
-             .gallery-arrow {
-                 width: 30px;
-                 height: 30px;
-                 background-image: url("../images/slide-arrow.svg");
-                 background-repeat: no-repeat;
-             }   //  end of .gellery-arrow
-             .arrow-left {
-                 position: absolute;
-                 left: 0;
-                 top: 43%;
-                 @include mq($phoneLandscape){
-                     top:50%;
-                 }
-             }  //  end of .arrow-left
-             .arrow-right{
-                 transform: rotate(180deg);
-                 position: absolute;
-                 right: 0;
-                 top: 43%;
-                 @include mq($phoneLandscape){
-                     top: 50%;
-                 }
-             }   //  end of .arrow-right
-             .style-gallery{
-                 .style-img {
-                        @include bg-img;
-                        @include margin-center;
-                        width: 80%;
-                        height: 200px;
-                        // background-color: $img-bg-color;
-                        background-image: url(../images/product/product-sg-05.jpg);
-                        background-repeat: no-repeat;
-                        @include margin-center;
-                        @include mq($phoneLandscape){
-                            margin: 0;
-                        }
-                        @include mq($tabletLandscape){
-                          width:100%;
-                        }
-                     
-                     }  //  end of .style-img
-                 .style-img:nth-child(2),
-                 .style-img:nth-child(3){
-                     display:none; 
-                     }
-                     .style-img:nth-child(2){
-                         @include mq($phoneLandscape){
-                             display:block;
-                             justify-self: start;
-                         }
-                     }
 
-                     .style-img:nth-child(3){
-                         @include mq($tabletLandscape){
-                             display:block;
-                         }
-                     }
-
-                     @include mq($phoneLandscape){
-                        @include grid50;
-                       grid-gap: 10px;
-                       justify-items: end;
-
-                     }
-                     
-                     @include mq($tabletLandscape){
-                         grid-template-columns: repeat(3, 33%);
-                         max-width: 900px;
-                         @include margin-center;
-                      }
-
-                     
-             }//  end of .styles-gallery
-      }    //  end of .styles-wrpper
-    @include mq($phoneLandscape){
-        p{
-            text-align: center;
-        }
-    } //  end of .suggestion mq tablet
-} //  end of .suggestion
 
 
 //styles styling
@@ -267,31 +160,9 @@
             color: $brand-color;
         }
         .slick-dots {
-            width: 90%;
+            right: 0;
         }
-             .gallery-arrow {
-                 width: 30px;
-                 height: 30px;
-                 background-image: url("../images/slide-arrow-white.svg");
-                 background-repeat: no-repeat;
-             }  //  end of .gellery-arrow
-             .arrow-left {
-                 position: absolute;
-                 left: 0;
-                 top: 43%;
-                 @include mq($phoneLandscape){
-                     top:50%;
-                 }
-             }   //  end of .arrow-left
-             .arrow-right{
-                 transform: rotate(180deg);
-                 position: absolute;
-                 right: 0;
-                 top: 43%;
-                 @include mq($phoneLandscape){
-                     top: 50%;
-                 }
-             }  //  end of .arrow-right
+           
              .style-gallery{
                  padding: 0 30px;
                  .style-img {
@@ -309,30 +180,16 @@
                      .style3{
                          background-image: url(../images/product/product-model-03.jpg);
                      }
-                    //      .style-img:nth-child(2),
-                    //      .style-img:nth-child(3){
-                    //          display:none; 
-                    //          }
-                    //          .style-img:nth-child(2){
-                    //              @include mq($phoneLandscape){
-                    //                  display:block;
-                    //              }
-                    //          }
-                    //          .style-img:nth-child(3){
-                    //              @include mq($tabletLandscape){
-                    //                  display:block;
-                    //              }
-                    //          }
-
-                    //    @include mq($phoneLandscape){
-                    //          @include grid50;
-                    //          grid-gap: 10px;
-                    //          padding-bottom: 30px;
-
-                    //      }   
-                    //  @include mq($tabletLandscape){
-                    //      grid-template-columns: repeat(3, 33%);
-                    //   }          
+                     .style4{
+                        background-image: url(../images/product/product-model-04.jpg);
+                    }
+                    .style5{
+                        background-image: url(../images/product/product-model-05.jpg);
+                    }
+                    .style6{
+                        background-image: url(../images/product/product-model-06.jpg);
+                    }
+                   
               }  //  end of .style-gallery
     }   //  end of .styles-wrapper
     @include mq($phoneLandscape){
