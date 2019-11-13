@@ -10,6 +10,7 @@ nav {
     .show & {
         display: flex;
         flex-direction: column;
+        z-index:2;
     }
 
     ul {
