@@ -50,10 +50,6 @@ h1 {
 //     font-family: $heading-font;
 // }
 
-// a, input, p {
-//     font-family: $futura;
-//     letter-spacing: $letterspace;
-// }
 
 ul a {
     font-family: $futura;
@@ -65,6 +61,11 @@ ul a {
     p {
        text-align: center; 
     }
+}
+
+input {
+    font-family: $futura;
+    letter-spacing: $letterspace;
 }
 
 

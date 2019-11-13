@@ -456,16 +456,18 @@
         }
         .form-row{
             display: flex;
+            justify-content: space-between;
         }
         .email-group{
-            width: 80%;
+            width: 85%;
             border-bottom: 1px solid $brand-color;
             input:focus{
-                width:82%;
+                width: 82%;
                 outline: none;
             }
             input{
-                width:100%;
+                font-size: 0.8em;
+                width: 100%;
                 border: 0;
                 background-color: #F6F6F6;
             }
@@ -475,10 +477,10 @@
             input{
                 @include gradient(90deg, $list3);
                 color:white;
-                margin-left:20px;
+                margin-left: 20px;
                 border: none;
-                padding: 8px 5px;
-                font-size: 0.6em;
+                padding: 8px;
+                font-size: 0.7em;
                 text-transform: uppercase;
             }
         }    //  end of .submit-group
