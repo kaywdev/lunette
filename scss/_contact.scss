@@ -13,6 +13,11 @@ fieldset {
 }
 
 // Styles
+.c-wrapper {
+    padding: $padding*2 $padding;
+}
+
+
 .contact p {
     font-family: $futura;
     font-weight: 400;
@@ -67,6 +72,12 @@ input, select, textarea {
         font-size: 1em;
         font-family: $futura;
         letter-spacing: $letterspace;
+
+    }
+
+    .c-name,
+    .c-email,
+    .c-subject {
         border-bottom: 1px solid $brand-color;
     }
 
