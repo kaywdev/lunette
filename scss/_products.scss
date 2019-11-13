@@ -252,6 +252,23 @@
      }
     .styles-wrapper{
         position: relative;
+
+        .slick-prev {
+            left: 8px;
+            z-index: 2;
+        }
+
+        .slick-next {
+            right: 25px;
+        }
+
+        .slick-prev:before, .slick-next:before {
+            font-size: 35px;
+            color: $brand-color;
+        }
+        .slick-dots {
+            width: 90%;
+        }
              .gallery-arrow {
                  width: 30px;
                  height: 30px;
@@ -292,30 +309,30 @@
                      .style3{
                          background-image: url(../images/product/product-model-03.jpg);
                      }
-                         .style-img:nth-child(2),
-                         .style-img:nth-child(3){
-                             display:none; 
-                             }
-                             .style-img:nth-child(2){
-                                 @include mq($phoneLandscape){
-                                     display:block;
-                                 }
-                             }
-                             .style-img:nth-child(3){
-                                 @include mq($tabletLandscape){
-                                     display:block;
-                                 }
-                             }
+                    //      .style-img:nth-child(2),
+                    //      .style-img:nth-child(3){
+                    //          display:none; 
+                    //          }
+                    //          .style-img:nth-child(2){
+                    //              @include mq($phoneLandscape){
+                    //                  display:block;
+                    //              }
+                    //          }
+                    //          .style-img:nth-child(3){
+                    //              @include mq($tabletLandscape){
+                    //                  display:block;
+                    //              }
+                    //          }
 
-                       @include mq($phoneLandscape){
-                             @include grid50;
-                             grid-gap: 10px;
-                             padding-bottom: 30px;
+                    //    @include mq($phoneLandscape){
+                    //          @include grid50;
+                    //          grid-gap: 10px;
+                    //          padding-bottom: 30px;
 
-                         }   
-                     @include mq($tabletLandscape){
-                         grid-template-columns: repeat(3, 33%);
-                      }          
+                    //      }   
+                    //  @include mq($tabletLandscape){
+                    //      grid-template-columns: repeat(3, 33%);
+                    //   }          
               }  //  end of .style-gallery
     }   //  end of .styles-wrapper
     @include mq($phoneLandscape){

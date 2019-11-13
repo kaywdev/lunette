@@ -181,7 +181,7 @@
             width:120px;
             height: 80px;
             @include margin-center;
-           @include bg-img;
+            @include bg-img;
             background-size: contain;
         }
         .design-ic{
