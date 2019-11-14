@@ -78,7 +78,7 @@ $checkboxFrame.on('change', function () {
     // checked...
     const frame = $(this).val();
     console.log(this);
-    
+
     $btnAddToCart.val('Add to Cart')
         .removeAttr('disabled');
     $selectedFrameOut.text(capitalizeFirstLetter(frame));
@@ -94,10 +94,7 @@ function capitalizeFirstLetter(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-// Prevent the t-shirt form from re-freshing the page...
-// ...Not really part of the core script, but leave it in
-// otherwise the page will refresh whenever you submit
-// the form...
+// Prevent the form from re-freshing the page
 $('#glasses-form').submit(function (e) {
     e.preventDefault();
 });
