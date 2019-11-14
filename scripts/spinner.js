@@ -1,126 +1,116 @@
-// Created based on Spinner v1.0  
-// by: Michael Whyte
-// c. 2019 
+// Shopping Cart - v1.0
+
+// *** Feel free to change any of this script...
+// ...thee are just starter variables and event
+// handlers to help you get started...feel free
+// to delete or modify...
+//
+
+// HTML Elements
+// Slide Elements
+const $slide = $('#slide');
+
+// Product Form Elements
+const $checkboxLense = $('.form-group-lense input');
+const $checkboxFrame = $('.form-group-frame input');
+// Form Submit Button Element
+const $btnAddToCart = $('#btn-add-to-cart');
+// Selected Product Information Output Elements
+const $selectedLenseOut = $('#selected-lense-out');
+const $selectedFrameOut = $('#selected-frame-out');
 
 
-// Buttons
-const btnRotateCW = document.getElementById('btn-rotate-clockwise');
-const btnRotateCCW = document.getElementById('btn-rotate-counter-clockwise');
-
-// Slide Variables
-
-// Slide Container
-const slideContainer = document.getElementById('slide-container');
-
-// Slide
-const slide = document.getElementById('slide');
-
-// Number of slides
-const numberOfSlides = 12;
-
-// Counter - used to keep track of the current slide
-// *** We start out at slide 1, which is position
-// zero in our bikeImages array
-let counter = 0;
-
-// Slide Change Rate;
-let changeRate = 8;
-
-// Create Slides
-const slides = createImages(numberOfSlides, 'glasses');
-
-// Mouse Variables
-
-// Mouse Position
-let mx;
-// Is the Mouse Down
-let isMouseDown = false;
-
-// Event Listeners
-slideContainer.addEventListener('mousedown', function (e) {
-    isMouseDown = true;
-    mx = e.clientX;
-});
-
-slideContainer.addEventListener('mouseup', function (e) {
-    isMouseDown = false;
-    mx = e.clientX;
-});
-
-slideContainer.addEventListener('mouseleave', function (e) {
-    isMouseDown = false;
-    mx = null;
-});
-
-
-slideContainer.addEventListener('mousemove', function (e) {
-    // Fast fail
-    // - Kill the function if the mouse
-    //   is not down 
-    if (!isMouseDown) {
-        return;
-    }
-
-    // Get the new position of the mouse
-    let newMX = e.clientX;
-
-    if (newMX < (mx - changeRate)) {
-        // add 1 to the counter
-        counter++;
-        // If the counter is equal to the length of
-        // our array of bike images it means we have 
-        // reached the last slide. We should then reset
-        // the counter to zero to return to the first
-        // slide
-        if (counter === numberOfSlides) {
-            counter = 0;
-        }
-        // Update the image on the screen
-        slide.src = slides[counter].src;
-        // Update the mouse position
-        mx = newMX;
-    } else if (newMX > (mx + changeRate)) {
-        // subtract 1 from the counter
-        counter--;
-        // If the counter is less than zero, it 
-        // means we have reached the beginning of
-        // our bike images. We should then reset
-        // the counter to point to the last bike
-        // image in the array
-        if (counter < 0) {
-            counter = numberOfSlides - 1;
-        }
-        // Update the image on the screen
-        slide.src = slides[counter].src;
-        // Update the mouse position
-        mx = newMX;
-    }
-});
-
-// Prevent Browser Behaviour on Mousedown of image
-slide.addEventListener('mousedown', function (e) {
+// Event Handlers
+/*
+$thumbs.on('click mouseenter focus', function (e) {
     e.preventDefault();
+    // Get the thumbnail image of the thumbnail
+    // link that was clicked on...
+    const $thumb = $(this).children('img');
+    // Get the "src" attribute value and the
+    // "alt" attribute value from the thumbnail image
+    // that was clicked on...
+    const src = $thumb.attr('src');
+    const alt = $thumb.attr('alt');
+    // Set the "src" and "alt" attribute of the
+    // main slide to the new "src" and "alt" variable
+    // values
+    $slide.attr({
+        src: src,
+        alt: alt
+    });
+
+})
+*/
+
+// Thumbnails
+// Thumbnail event handler here
+
+// Lense Checkbox
+$checkboxLense.on('change', function () {
+
+    // Grab the current src attribute value of the 
+    // main t-shirt slide image
+    const currentSrc = $slide.attr('src');
+
+    // Grab the value of the radio button that was
+    // checked...
+    const lense = $(this).val();
+    console.log(this);
+    // Set the "src" attribute of the main slide to 
+    // the color that was selected above (the "color" variable)
+    // - Determine if the main slide is the: no-model, front or back
+    //   image by searching the file path of the slide image
+    /*
+    if (currentSrc.includes('-front')) {
+        $slide.attr('src', `images/t-shirt-${color}-front.jpg`);
+    } else if (currentSrc.includes('-back')) {
+        $slide.attr('src', `images/t-shirt-${color}-back.jpg`);
+    } else {
+        $slide.attr('src', `images/t-shirt-${color}-no-model.jpg`);
+    }
+    */
+   
+    // Change the thumbs to the color shirts that were selected
+    // above (via the "color" variable)...
+    // No Model
+    $slide.attr('href', `images/product-item/sg/sg_rosegold_${lense}_01.png`);
+    $slide.attr({
+        src: `images/product-item/sg/sg_rosegold_${lense}_01.png`,
+        alt: `rosegold ${lense} sunglasses`
+    });
+
+
+    // Update the color output
+    $selectedLenseOut.text(capitalizeFirstLetter(lense));
+
+
 });
 
-// Script Functions
+// Size Checkbox
+$checkboxSize.on('change', function () {
 
-// createImages
-// - Creates an array of images
-function createImages(numberOfImages, imageName) {
-    const imageList = [];
+    const size = $(this).val().toUpperCase();
+    $btnAddToCart.val('Add to Cart')
+        .removeAttr('disabled');
+    $selectedSizeOut.text(size);
 
-    // Use a loop to generate the array of 12 glasses images
-    for (let i = 1; i <= numberOfImages; i++) {
-        const img = new Image();
-        // Set the "src" property of the newly
-        // created image object
-        img.src = `images/product-item/sg/glasses/${imageName}-0${i}.jpg`;
-        // Append the new image to the
-        // imageList
-        imageList.push(img);
-    }
+});
 
-    return imageList;
+// Utility Functions
+
+// Capitalizes the first character in a string
+// Code modified from this stackoverflow quesion:
+// https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript
+function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+// Prevent the t-shirt form from re-freshing the page...
+// ...Not really part of the core script, but leave it in
+// otherwise the page will refresh whenever you submit
+// the form...
+$('#t-shirt-form').submit(function (e) {
+    e.preventDefault();
+});
 
