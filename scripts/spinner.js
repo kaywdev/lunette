@@ -74,9 +74,9 @@ $checkboxLense.on('change', function () {
     // Change the thumbs to the color shirts that were selected
     // above (via the "color" variable)...
     // No Model
-    $slide.attr('href', `images/product-item/sg/sg_rosegold_${lense}_01.png`);
+    $slide.attr('href', `images/product-item/sg/sg_rosegold_${lense}_1.png`);
     $slide.attr({
-        src: `images/product-item/sg/sg_rosegold_${lense}_01.png`,
+        src: `images/product-item/sg/sg_rosegold_${lense}_1.png`,
         alt: `rosegold ${lense} sunglasses`
     });
 
