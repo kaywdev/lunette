@@ -3,33 +3,40 @@
 * {box-sizing: border-box;}
 
 // checck sections.scss line 241
-.gls-slide {
-    position: relative;
-    // height: 200px; /*should be the same height as the images*/
+// .gls-slide {
+//     position: relative;
+//     // height: 200px; /*should be the same height as the images*/
+//     width: 100%;
+//     height: 200px;
+//     // background-image: url(../images/home/home-custom-pink.jpg);
+//     // @include bg-img;
+//     // img {
+//     //     @include margin-center;
+//     // }
+// }
 
-    // width: 100%;
-    height: 200px;
-    // background-image: url(../images/home/home-custom-pink.jpg);
-    // @include bg-img;
-    // @include margin-center;
-    margin-top: 45px;
-    margin-bottom: 20px;
-}
+.slider-wrapper {
+    display: flex;
+    // flex-wrap: nowrap;
+    justify-items: center;
+    
 
-.img-comp-img {
-  position: absolute;
-  width: auto;
-  height: auto;
-  overflow: hidden;
-  height: 200px;
-  max-width: 300px;
+    .img-comp-img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    max-height: 200px;
+    max-width: 300px;
+
 }
 
 .img-comp-img img {
     display: block;
-    vertical-align: middle;
-    height: 200px;
+    // vertical-align: middle;
+    max-height: 200px;
     max-width: 300px;
+
 }
 
 .img-comp-slider {
@@ -56,3 +63,6 @@
         transform: translate(-50%, 50%);
     }
 }
+
+}
+
