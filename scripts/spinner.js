@@ -1,10 +1,3 @@
-// Shopping Cart - v1.0
-
-// *** Feel free to change any of this script...
-// ...thee are just starter variables and event
-// handlers to help you get started...feel free
-// to delete or modify...
-//
 
 // HTML Elements
 // Slide Elements
@@ -20,31 +13,6 @@ const $selectedLenseOut = $('#selected-lense-out');
 const $selectedFrameOut = $('#selected-frame-out');
 
 
-// Event Handlers
-/*
-$thumbs.on('click mouseenter focus', function (e) {
-    e.preventDefault();
-    // Get the thumbnail image of the thumbnail
-    // link that was clicked on...
-    const $thumb = $(this).children('img');
-    // Get the "src" attribute value and the
-    // "alt" attribute value from the thumbnail image
-    // that was clicked on...
-    const src = $thumb.attr('src');
-    const alt = $thumb.attr('alt');
-    // Set the "src" and "alt" attribute of the
-    // main slide to the new "src" and "alt" variable
-    // values
-    $slide.attr({
-        src: src,
-        alt: alt
-    });
-
-})
-*/
-
-// Thumbnails
-// Thumbnail event handler here
 
 // Lense Checkbox
 $checkboxLense.on('change', function () {
@@ -56,34 +24,41 @@ $checkboxLense.on('change', function () {
     // Grab the value of the radio button that was
     // checked...
     const lense = $(this).val();
-    // console.log(this);
-
-    $slide.attr('href', `images/product-item/sg/sg_rosegold_${lense}_1.png`);
-    $slide.attr({
-        src: `images/product-item/sg/sg_rosegold_${lense}_1.png`,
-        alt: `rosegold ${lense} sunglasses`
-    });
+    let currentLense = lense;
 
 
-    // Update the color output
+    // Update the lense output
     $selectedLenseOut.text(capitalizeFirstLetter(lense));
-
-
+    console.log(currentLense);
 });
 
-// Frame Checkbox
-$checkboxFrame.on('change', function () {
 
-    // Grab the value of the radio button that was
-    // checked...
-    const frame = $(this).val();
-    console.log(this);
 
-    $btnAddToCart.val('Add to Cart')
-        .removeAttr('disabled');
-    $selectedFrameOut.text(capitalizeFirstLetter(frame));
+// // Frame Checkbox
+// $checkboxFrame.on('change', function () {
 
-});
+//     // Grab the value of the radio button that was
+//     // checked...
+//     const frame = $(this).val();
+//     let currentFrame = frame;
+//     console.log(currentFrame);
+
+//     $btnAddToCart.val('Add to Cart')
+//                  .removeAttr('disabled');
+
+//      // Update the lense output
+//     $selectedFrameOut.text(capitalizeFirstLetter(frame));
+    
+// });
+
+
+// // Image output
+// $slide.attr('href', `images/product-item/sg/sg_${currentFrame}_${currentLense}_1.png`);
+// $slide.attr({
+//     src: `images/product-item/sg/sg_${currentFrame}_${currentLense}_1.png`,
+//     alt: `${currentFrame} ${currentLense} sunglasses`
+// });
+
 
 // Utility Functions
 
