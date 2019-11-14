@@ -50,30 +50,14 @@ $thumbs.on('click mouseenter focus', function (e) {
 $checkboxLense.on('change', function () {
 
     // Grab the current src attribute value of the 
-    // main t-shirt slide image
+    // main glasses slide image
     const currentSrc = $slide.attr('src');
 
     // Grab the value of the radio button that was
     // checked...
     const lense = $(this).val();
-    console.log(this);
-    // Set the "src" attribute of the main slide to 
-    // the color that was selected above (the "color" variable)
-    // - Determine if the main slide is the: no-model, front or back
-    //   image by searching the file path of the slide image
-    /*
-    if (currentSrc.includes('-front')) {
-        $slide.attr('src', `images/t-shirt-${color}-front.jpg`);
-    } else if (currentSrc.includes('-back')) {
-        $slide.attr('src', `images/t-shirt-${color}-back.jpg`);
-    } else {
-        $slide.attr('src', `images/t-shirt-${color}-no-model.jpg`);
-    }
-    */
-   
-    // Change the thumbs to the color shirts that were selected
-    // above (via the "color" variable)...
-    // No Model
+    // console.log(this);
+
     $slide.attr('href', `images/product-item/sg/sg_rosegold_${lense}_1.png`);
     $slide.attr({
         src: `images/product-item/sg/sg_rosegold_${lense}_1.png`,
@@ -87,13 +71,17 @@ $checkboxLense.on('change', function () {
 
 });
 
-// Size Checkbox
-$checkboxSize.on('change', function () {
+// Frame Checkbox
+$checkboxFrame.on('change', function () {
 
-    const size = $(this).val().toUpperCase();
+    // Grab the value of the radio button that was
+    // checked...
+    const frame = $(this).val();
+    console.log(this);
+    
     $btnAddToCart.val('Add to Cart')
         .removeAttr('disabled');
-    $selectedSizeOut.text(size);
+    $selectedFrameOut.text(capitalizeFirstLetter(frame));
 
 });
 
@@ -110,7 +98,7 @@ function capitalizeFirstLetter(str) {
 // ...Not really part of the core script, but leave it in
 // otherwise the page will refresh whenever you submit
 // the form...
-$('#t-shirt-form').submit(function (e) {
+$('#glasses-form').submit(function (e) {
     e.preventDefault();
 });
 
