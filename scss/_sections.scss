@@ -244,12 +244,106 @@
         // height: 200px; /*should be the same height as the images*/
         width: 300px;
         height: 200px;
-        text-align: center;
-        // background-image: url(../images/home/home-custom-pink.jpg);
-        // @include bg-img;
-        // img {
-        //     @include margin-center;
-        // }
+
+            .img-comp-img {
+                position: absolute;
+                width: auto;
+                height: auto;
+                overflow: hidden;
+                max-height: 200px;
+                max-width: 300px;
+
+            }
+
+            .img-comp-img img {
+                display: block;
+                // vertical-align: middle;
+                max-height: 200px;
+                max-width: 300px;
+
+            }
+
+            .img-comp-slider {
+                position: absolute;
+                z-index: 9;
+                cursor: ew-resize;
+                /*set the appearance of the slider:*/
+                width: 40px;
+                height: 40px;
+                background-color: $brand-color;
+                opacity: 0.7;
+                border-radius: 50%;
+                right: 0;
+
+                &:before {
+                    content:"";
+                    background-image: url(../images/slide-arrow-two-ways.svg);
+                    background-repeat: no-repeat;
+                    z-index: 100;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    top: 0%;
+                    left: 50%;
+                    transform: translate(-50%, 50%);
+                }
+            }
+                
+
+        @include mq($phonePortrait){
+            width: 500px;
+            height: 400px;
+
+            .img-comp-img {
+                // position: absolute;
+                // width: auto;
+                // height: auto;
+                // overflow: hidden;
+                max-width: 500px;
+                max-height: 400px;
+            }
+
+            .img-comp-img img {
+                max-width: 500px;
+                max-height: 400px;
+            }
+        }
+
+        @include mq($phoneLandscape){
+            width: 800px;
+            height: 600px;
+
+            .img-comp-img {
+                // position: absolute;
+                // width: auto;
+                // height: auto;
+                // overflow: hidden;
+                max-width: 800px;
+                max-height: 600px;
+            }
+
+            .img-comp-img img {
+                max-width: 800px;
+                max-height: 600px;
+            }
+        }
+
+        @include mq($tabletLandscape){
+            width: 500px;
+            height: 400px;
+            align-items: center;
+
+            .img-comp-img {
+                max-width: 500px;
+                max-height: 400px;
+            }
+
+            .img-comp-img img {
+                max-width: 500px;
+                max-height: 400px;
+            }
+        }
+
     }
     .cstm-text{
         padding:$padding;
