@@ -237,8 +237,7 @@
                  padding:0 $padding;
                  .style-img {
                         @include bg-img;
-                        @include margin-center;
-                        // width: 60%;
+                        margin: 0 10px;
                         height: 200px;
 
                  }  //  end of .style-img
@@ -276,6 +275,13 @@
                 }
                 .slick-dots {
                     right: 0;
+                }
+                .slick-list {
+                    margin: 0 -10px;
+                }
+                .slick-slider {
+                    overflow: hidden;
+                    height: 200px;
                 }
                      
              }//  end of .styles-gallery

@@ -162,6 +162,13 @@
         .slick-dots {
             right: 0;
         }
+        .slick-list {
+            margin: 0 -10px;
+        }
+        .slick-slider {
+            overflow: hidden;
+            height: 300px;
+        }
            
              .style-gallery{
                  padding: 0 30px;
@@ -169,7 +176,7 @@
                      width: 100%;
                      height: 300px;
                      @include bg-img;
-                     @include margin-center;
+                     margin: 0 10px;
                      }
                      .style1{
                          background-image: url(../images/product/product-model-01.jpg);
