@@ -16,8 +16,7 @@ fieldset {
         @include grid50;
         grid-template-rows:30px 1fr;
         grid-column-gap: 50px;
-        #name, 
-        #subject{
+        #name{
             order: 3;
         }
         #mail, 
@@ -25,7 +24,7 @@ fieldset {
             order:4;
         }
         #subject{
-            align-self: start;;
+            align-self: start;
         }
     }
 }
@@ -52,7 +51,7 @@ fieldset {
             }
             .cf {
                 max-width: 700px;
-                margin: 20px auto;
+                margin: 0 auto;
             
                 input, textarea, select {
                     border: 0;
@@ -85,17 +84,58 @@ fieldset {
                     letter-spacing: $letterspace; 
                     font-family: $condor;
                 }
+
+                .subject{
+                    margin-bottom: 0.5em;
+                }
             
+                .custom-dropdown{
+                    position: relative;
+                    display: inline-block;
+                    width:100%;
+                    margin-bottom: 30px;
                 select {
                     color: gray;
                     background-color: white;
                     border-radius: none;
+                    appearance: none;
                     -moz-apperance: none;
                     -webkit-appearance: none;
-                    background: url(..images/svg-icons/slide-arrow.svg) no-repeat right;
                     outline: none;
-                    // border-bottom: 1px solid $brand-color;
+                    margin: 0;
+                    border: 1px solid $brand-color;
+                    border-radius: 0;
+                    padding-left: 15px;
+
+                 }
+                 select::-ms-expand {
+                    display: none;
                 }
+                
+                 @include mq ($tabletPortrait){
+                    order: 3;
+                    margin-top: 10px;
+                }
+             }
+             .custom-dropdown::before,
+                .custom-dropdown::after {
+                content: "";
+                position: absolute;
+                pointer-events: none;
+                }
+                .custom-dropdown::after { /*  Custom dropdown arrow */
+                    content: "\25BC";
+                    height: 1em;
+                    font-size: 1em;
+                    line-height: 1;
+                    right: 1.2em;
+                    margin-top: -1.5em;
+                    color: $brand-color;
+                  }
+                
+                  .custom-dropdown select[disabled] {
+                    color: rgba(0,0,0,.25);
+                  }
                 input, select, textarea {
                     outline: none;
                 }
