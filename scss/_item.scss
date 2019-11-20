@@ -235,7 +235,7 @@
        
              .suggestion-list{
                  padding:0 $padding;
-                 .style-img {
+                 .suggestion-img {
                         @include bg-img;
                         margin: 0 10px;
                         height: 200px;
@@ -279,12 +279,14 @@
                 .slick-list {
                     margin: 0 -10px;
                 }
-                .slick-slider {
-                    overflow: hidden;
-                    height: 200px;
-                }
                      
              }//  end of .styles-gallery
+             .slick-slider {
+                overflow: hidden;
+                height: 200px;
+                max-width: 1000px;
+                @include margin-center;
+            }
       }    //  end of .styles-wrpper
     @include mq($phoneLandscape){
         p{
