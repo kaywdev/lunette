@@ -10,103 +10,121 @@ fieldset {
     margin: 0;
     padding: $padding;
     border: none;
+    .half{
+        @include mq($tabletLandscape){
+        display: grid;
+        @include grid50;
+        grid-template-rows:30px 1fr;
+        grid-column-gap: 50px;
+        #name, 
+        #subject{
+            order: 3;
+        }
+        #mail, 
+        #message{
+            order:4;
+        }
+        #subject{
+            align-self: start;;
+        }
+    }
 }
-
+    
+}
 // Styles
 .c-wrapper {
     padding: $padding*2 $padding;
+
+        .contact {
+            p {
+                font-family: $futura;
+                font-weight: 400;
+                text-align: center;
+            }
+            p:first-child{
+                padding: $padding;
+            }
+            p:not(:first-child){
+                padding-top: $padding/4;
+            }
+            span {
+                color: $btn-pink
+            }
+            .cf {
+                max-width: 700px;
+                margin: 20px auto;
+            
+                input, textarea, select {
+                    border: 0;
+                    outline: 0;
+                    padding: 0.5em 0;
+                    margin-bottom: 30px;
+                    width: 100%;
+                    resize: none;
+                    font-size: 1em;
+                    font-family: $futura;
+                    letter-spacing: $letterspace;
+                }
+            
+                .c-name,
+                .c-email,
+                .c-subject {
+                    border-bottom: 1px solid $brand-color;
+                }
+            
+                textarea {
+                    border: 1px solid $brand-color;
+                    padding: 0.5em;
+                    margin-top: 10px;
+            
+                }
+            
+                label {
+                    display: block;
+                    font-size: 1.1em;
+                    letter-spacing: $letterspace; 
+                    font-family: $condor;
+                }
+            
+                select {
+                    color: gray;
+                    background-color: white;
+                    border-radius: none;
+                    -moz-apperance: none;
+                    -webkit-appearance: none;
+                    background: url(..images/svg-icons/slide-arrow.svg) no-repeat right;
+                    outline: none;
+                    // border-bottom: 1px solid $brand-color;
+                }
+                input, select, textarea {
+                    outline: none;
+                }
+
+                //button Styling
+                    .c-submit {
+                        width: 200px;
+                        @include margin-center;
+                        text-align: center;
+                        padding: 10px;
+                        background-color: $brand-navy-color;
+                        text-decoration: none;
+                        color:$text-color-light;
+                        font-weight: 200;
+                        text-transform: uppercase;
+                        font-family: $futura;
+                        align-content: center;
+                        letter-spacing: $letterspace;
+                        display:block;
+                    }
+                
+            } //end of cf
+        }//end of contact
 }
 
 
-.contact p {
-    font-family: $futura;
-    font-weight: 400;
-    text-align: center;
-}
-
-.contact {
-    p:first-child{
-        padding: $padding;
-    }
-    p:not(:first-child){
-        padding-top: $padding/4;
-    }
-}
-.contact span {
-    color: $btn-pink
-}
 
 
-//button Styling
-.c-submit {
-    width: 200px;
-    @include margin-center;
-    text-align: center;
-    padding: 10px;
-    background-color: $brand-navy-color;
 
-    text-decoration: none;
-    color:$text-color-light;
-    font-weight: 200;
-    text-transform: uppercase;
-    font-family: $futura;
-    align-content: center;
-    letter-spacing: $letterspace;
-}
-
-input, select, textarea {
-    outline: none;
-}
-
-.cf {
-    max-width: 700px;
-    margin: 20px auto;
-
-    input, textarea, select {
-        border: 0;
-        outline: 0;
-        padding: 0.5em 0;
-        margin-bottom: 30px;
-        width: 100%;
-        resize: none;
-        font-size: 1em;
-        font-family: $futura;
-        letter-spacing: $letterspace;
-
-    }
-
-    .c-name,
-    .c-email,
-    .c-subject {
-        border-bottom: 1px solid $brand-color;
-    }
-
-    textarea {
-        border: 1px solid $brand-color;
-        padding: 0.5em;
-        margin-top: 10px;
-
-    }
-
-    label {
-        display: block;
-        font-size: 1.1em;
-        letter-spacing: $letterspace; 
-        font-family: $condor;
-    }
-
-    select {
-        color: gray;
-        background-color: white;
-        border-radius: none;
-        -moz-apperance: none;
-        -webkit-appearance: none;
-        background: url(..images/svg-icons/slide-arrow.svg) no-repeat right;
-        outline: none;
-        // border-bottom: 1px solid $brand-color;
-    }
-
-}
 
 
 
