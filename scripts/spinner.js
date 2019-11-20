@@ -17,8 +17,8 @@ const $selectedFrameOut = $('#selected-frame-out');
 
 
 
-var lense = document.querySelector('input[name="lense-color"]:checked').value;
-var frame = document.querySelector('input[name="frame-color"]:checked').value;
+let lense = document.querySelector('input[name="lense-color"]:checked').value;
+let frame = document.querySelector('input[name="frame-color"]:checked').value;
 
 
 $checkboxLense.on('change', function () {
@@ -35,7 +35,6 @@ $checkboxLense.on('change', function () {
 });
 
 
-
 $checkboxFrame.on('change', function () {
     frame = $(this).val();
     console.log(lense, frame)
@@ -50,56 +49,13 @@ $checkboxFrame.on('change', function () {
 });
 
 
-/*
-// Range slider from Codepen 
-const body = document.querySelector("body");
-const productSlider = document.querySelector(".product__slider");
-
-function updateShoe() {
-    // need to move to the left, not right
-    document.querySelector('.item-img').style.setProperty("--pos", productSlider.value * -1);
-}
-
-// mousemove swaps values as moving, change only updates after letting go
-productSlider.addEventListener("mousemove", updateShoe);
-
-// Mobile fixes here since the range input is finnicky on phones
-
-function map(num, in_min, in_max, out_min, out_max) {
-    return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-}
-
-body.addEventListener("touchmove", e => {
-    swipeShoe(e);
-});
-
-function swipeShoe(e) {
-    const touchPos = e.touches[0].clientX;
-    // clamp between 0 / 12;
-    let clamped = Math.round(
-        map(Math.round(touchPos), 1, window.innerWidth, 0, 11)
-    );
-    // off chance you touch into the code area
-    if (clamped < 0) {
-        clamped = 0;
-    }
-    if (clamped > 11) {
-        clamped = 11;
-    }
-
-    document.querySelector('.productSlider').style.setProperty("--pos", clamped * -1);
-}
-*/
-
 
 // Range slider from W3C School 
-var rangeSlider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = rangeSlider.value; // Display the default slider value
+let rangeSlider = document.getElementById("myRange");
 
 // Update the current slider value (each time you drag the slider handle)
 rangeSlider.oninput = function () {
-    output.innerHTML = this.value;
+    console.log($(this).val());
 }
 
 
