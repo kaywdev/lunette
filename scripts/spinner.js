@@ -50,148 +50,58 @@ $checkboxFrame.on('change', function () {
 });
 
 
-
-// ------------------------- TEST 1 ---------------------------
-// // Current checked Radio button - Lense color
-// const lenseRadios = document.getElementsByName('lense-color');
-// function findLense(){
-//     for (var i = 0, length = lenseRadios.length; i < length; i++) {
-//         if (lenseRadios[i].checked) {
-//             const currentLense = lenseRadios[i].value;
-//             alert(currentLense);
-            
-//         }
-//     };
-// };
-
-// // Current checked Radio button - Frame color
-// const frameRadios = document.getElementsByName('frame-color');
-// function findFrame(){
-//     for (var i = 0, length = frameRadios.length; i < length; i++) {
-//         if (frameRadios[i].checked) {
-//             const currentFrame = frameRadios[i].value;
-//             alert(currentFrame);
-
-//         }
-//     };
-// };
-
 /*
-$checkboxLense.on('change', function () {
-    findLense();
+// Range slider from Codepen 
+const body = document.querySelector("body");
+const productSlider = document.querySelector(".product__slider");
+
+function updateShoe() {
+    // need to move to the left, not right
+    document.querySelector('.item-img').style.setProperty("--pos", productSlider.value * -1);
+}
+
+// mousemove swaps values as moving, change only updates after letting go
+productSlider.addEventListener("mousemove", updateShoe);
+
+// Mobile fixes here since the range input is finnicky on phones
+
+function map(num, in_min, in_max, out_min, out_max) {
+    return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
+body.addEventListener("touchmove", e => {
+    swipeShoe(e);
 });
 
-
-
-$checkboxFrame.on('change', function () {
-    findFrame();
-});
-
-
-
-
-// ------------------------- TEST 2 ---------------------------
-/*
-(function () {
-    var radios = document.getElementsByName('lense-color');
-    var radios2 = document.getElementsByName('frame-color');
-
-    for (var i = 0; i < radios.length; i++) {
-        radios[i].onclick = function () {
-            // console.log(this.value);
-            const currentLense = this.value;
-            // console.log(currentLense);
-        }
+function swipeShoe(e) {
+    const touchPos = e.touches[0].clientX;
+    // clamp between 0 / 12;
+    let clamped = Math.round(
+        map(Math.round(touchPos), 1, window.innerWidth, 0, 11)
+    );
+    // off chance you touch into the code area
+    if (clamped < 0) {
+        clamped = 0;
     }
-    for (var i = 0; i < radios2.length; i++) {
-        radios2[i].onclick = function () {
-            // console.log(this.value);
-            const currentFrame = this.value;
-            // console.log(currentFrame);
-        }
+    if (clamped > 11) {
+        clamped = 11;
     }
-    console.log(currentFrame);
-    // console.log(${ currentFrame } ${ currentLense } sunglasses)
-})();
-*/
 
-
-// ------------------------- TEST 3..failed ---------------------------
-/*
-$checkboxLense.on('change', function () {
-    $('input[name=lense-color], input[name=frame-color]').change(function () {
-        // $('#image').prop('src', $('input[name=lense-color]:checked').val() + '-' + $('input[name=rframe-color]:checked').val() + '.jpg');
-        $('#image').prop('src', `images/produt-item/sg/sg_${('input[name=lense-color]:checked').val()} + '-' 
-        + ${('input[name=rframe-color]:checked').val()} + '.jpg'`);
-    };
-});
-*/
-
-
-
-/*
-function combineLenseFrame(currentLense, currentFrame) {
-    $slide.attr('href', `images/product-item/sg/sg_${currentFrame}_${currentLense}_1.png`);
-    $slide.attr({
-        src: `images/product-item/sg/sg_${currentFrame}_${currentLense}_1.png`,
-        alt: `${currentFrame} ${currentLense} sunglasses`
-    });
+    document.querySelector('.productSlider').style.setProperty("--pos", clamped * -1);
 }
 */
 
 
+// Range slider from W3C School 
+var rangeSlider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = rangeSlider.value; // Display the default slider value
 
-/*
-// Grab the current src attribute value of the 
-// main glasses slide image
-const currentSrc = $slide.attr('src');
-// Grab the value of the radio button that was
-// checked...
-const currentLense = $checkboxLense('change').attr('value'); 
-// const currentLense = $(this).val();
-// const currentFrame = $()
-// const lense = $(this).val();
-console.log(currentLense);
+// Update the current slider value (each time you drag the slider handle)
+rangeSlider.oninput = function () {
+    output.innerHTML = this.value;
+}
 
-const currentFrame = 
-
-$slide.attr('href', `images/product-item/sg/sg_${currentFrame}_${currentLense}_1.png`);
-$slide.attr({
-    src: `images/product-item/sg/sg_${currentFrame}_${currentLense}_1.png`,
-    alt: `${currentFrame} ${currentLense} sunglasses`
-});
-
-// Update the color output
-$selectedLenseOut.text(capitalizeFirstLetter(lense));
-
-*/
-
-
-
-/*
-// Frame Checkbox
-$checkboxFrame.on('change', function () {
-
-    // Grab the value of the radio button that was
-    // checked...
-    const frame = $(this).val();
-    console.log(this);
-
-    $slide.attr('href', `images/product-item/sg/sg_rosegold_${lense}_1.png`);
-    $slide.attr({
-        src: `images/product-item/sg/sg_rosegold_${lense}_1.png`,
-        alt: `rosegold ${lense} sunglasses`
-    });
-
-
-
-    $btnAddToCart.val('Add to Cart')
-        .removeAttr('disabled');
-    $selectedFrameOut.text(capitalizeFirstLetter(frame));
-
-});
-
-*/
 
 
 // Utility Functions
