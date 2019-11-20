@@ -25,8 +25,9 @@
 @import 'contact';
 @import 'about';
 @import 'item';
-@import 'products'
+@import 'products';
 
 
 // Specialty Items
-// @import 'gallery';
+@import 'slick';
+@import 'slick-theme';
