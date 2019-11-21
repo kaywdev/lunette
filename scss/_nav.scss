@@ -26,13 +26,23 @@ nav {
         font-size: 1em;
         text-decoration: none;
         outline: none;
-        text-transform: uppercase;;
+        text-transform: uppercase;
+        color:black;
         
         #{$link-hover-selector} {
-            background-color: rgba(white, 0.3);
+             color:white;
+            background: linear-gradient($list3);
+            -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;  
         }
-            //testing
-            
+         
        }
-
+       .gl-nav{
+           a{
+               &:hover{
+               color: red !important;
+            }
+           }
+       }
+ 
 }

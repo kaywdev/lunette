@@ -10,6 +10,9 @@
 
             .choice{
                 text-align: center;
+                a{
+                    text-decoration: none;
+                }
                 .gls-img{
                     @include bg-img;
                     width: 250px;
