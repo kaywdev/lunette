@@ -88,8 +88,11 @@
                 h4{
                     font-weight: normal;
                     }
-                    a{
+                 a{
                         text-decoration: none;
+                        #{$link-hover-selector} {
+                         color:$brand-color;
+                        }
                     }
                 }  //  end of .product-wrapper
             

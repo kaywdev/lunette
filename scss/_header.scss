@@ -122,7 +122,7 @@ header {
                         .m-icon{
                         margin: 0 10px;
                         }
-                        &:hover{
+                        #{$link-hover-selector} {
                             filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(310deg) brightness(100%) contrast(68%);
                         }
                     }
