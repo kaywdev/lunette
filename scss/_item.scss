@@ -49,7 +49,6 @@
                 .rotate-range{
                     width:100%;
                     height: 50px;
-                    background-color: $img-bg-color;
                     @include margin-center;
                     margin-top: 5px;
                     
@@ -68,9 +67,10 @@
                     .product_slider::-webkit-slider-thumb {
                         -webkit-appearance: none;
                         appearance: none;
-                        width: 25px;
-                        height: 25px;
-                        background: $light-purple;
+                        width: 30px;
+                        height: 30px;
+                        background: $brand-ppl-color;
+                        border-radius: 50%;
                         cursor: pointer;
                     }
 
@@ -99,6 +99,12 @@
                         margin: 0;
                         color: $brand-ppl-color;
                         font-family: $condor;
+                    }
+                    .lenses-choice-wrapper,
+                    .frame-choice-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
                     }
                     .lense-img{
                         width: 50px;
