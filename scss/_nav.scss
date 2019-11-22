@@ -40,7 +40,9 @@ nav {
        .gl-nav{
            a{
                &:hover{
-               color: red !important;
+                   background: none;
+                   -webkit-text-fill-color: $brand-color;
+                    color: $brand-color;
             }
            }
        }
