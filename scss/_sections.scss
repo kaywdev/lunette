@@ -8,6 +8,9 @@
     grid-gap: 20px;
     margin-bottom: 0;
 
+                h2{
+                    margin: 0;
+                }
             .choice{
                 text-align: center;
                 a{
@@ -25,10 +28,10 @@
                     }
                 }
                 .eg-img{
-                    background-image: url(../images/home/home-eyeglasses.jpg);
+                    background-image: url(../images/product/product-eg-04.jpg);
                 }
                 .sg-img{
-                    background-image: url(../images/home/home-sunglasses.jpg);
+                    background-image: url(../images/product/product-sg-05.jpg);
                     background-position-y: 60%;
                 }
             }   //  end of .choice
@@ -52,6 +55,10 @@
                            
                         }
                 }  //  end of .gl-choice tablet
+
+                @include mq($tabletLandscape){
+                    grid-gap: 50px;
+                }
      }  //  end of .gl-choice
 
 
@@ -193,87 +200,6 @@
               line-height:45px;
               font-size:30px;
           }   
-
-        //     .img-comp-slider {
-        //         position: absolute;
-        //         z-index: 9;
-        //         cursor: ew-resize;
-        //         /*set the appearance of the slider:*/
-        //         width: 40px;
-        //         height: 40px;
-        //         background-color: $brand-color;
-        //         opacity: 0.7;
-        //         border-radius: 50%;
-        //         right: 0;
-
-        //         &:before {
-        //             content:"";
-        //             background-image: url(../images/slide-arrow-two-ways.svg);
-        //             background-repeat: no-repeat;
-        //             z-index: 100;
-        //             position: absolute;
-        //             width: 20px;
-        //             height: 20px;
-        //             top: 0%;
-        //             left: 50%;
-        //             transform: translate(-50%, 50%);
-        //         }
-        //     }
-                
-
-        // @include mq($phonePortrait){
-        //     width: 500px;
-        //     height: 400px;
-
-        //     .img-comp-img {
-        //         // position: absolute;
-        //         // width: auto;
-        //         // height: auto;
-        //         // overflow: hidden;
-        //         max-width: 500px;
-        //         max-height: 400px;
-        //     }
-
-        //     .img-comp-img img {
-        //         max-width: 500px;
-        //         max-height: 400px;
-        //     }
-        // }
-
-        // @include mq($phoneLandscape){
-        //     width: 800px;
-        //     height: 600px;
-
-        //     .img-comp-img {
-        //         // position: absolute;
-        //         // width: auto;
-        //         // height: auto;
-        //         // overflow: hidden;
-        //         max-width: 800px;
-        //         max-height: 600px;
-        //     }
-
-        //     .img-comp-img img {
-        //         max-width: 800px;
-        //         max-height: 600px;
-        //     }
-        // }
-
-        // @include mq($tabletLandscape){
-        //     width: 500px;
-        //     height: 400px;
-        //     align-items: center;
-
-        //     .img-comp-img {
-        //         max-width: 500px;
-        //         max-height: 400px;
-        //     }
-
-        //     .img-comp-img img {
-        //         max-width: 500px;
-        //         max-height: 400px;
-        //     }
-        // }
 
     }
     .cstm-text{
