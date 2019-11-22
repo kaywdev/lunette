@@ -20,8 +20,8 @@
                     @include margin-center;
 
                     @include mq($tabletLandscape){
-                        width: 250px;
-                         height: 150px;
+                        width: 350px;
+                         height: 210px;
                     }
                 }
                 .eg-img{
@@ -120,14 +120,161 @@
 //customize styling
 .customize{
     padding-bottom: $padding;
-    .gls-slide{
-        width:100%;
-        height: 300px;
-       background-image: url(../images/home/home-custom-pink.jpg);
-       @include bg-img;
-       @include margin-center;
-       margin-top: 45px;
-       margin-bottom: 20px;
+    .gls-slide {
+        // @include margin-center;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        // height: 200px; /*should be the same height as the images*/
+        // width: 300px;
+        // height: 200px;
+
+       & > img {
+        width: 100%;
+        height: 100%;
+      }
+        .resize {
+            position: absolute;
+            top:0;
+            left: 0;
+            width:50%;
+            overflow: hidden;
+            height: 100%;
+            >img{
+                width:auto;
+                height: 100%;
+                max-width: none;
+            }
+        }
+
+        .handle { /* Thin line seperator */
+            position:absolute; 
+            left:50%;
+            top:0;
+            bottom:0;
+            width:4px;
+            margin-left:-2px;
+            margin: 20px 0;
+            background: rgba(0,0,0,.5);
+            cursor: ew-resize;
+             @include mq($phoneLandscape){
+                margin: 55px 0;
+             }
+          }
+           
+          .handle:after {  /* Big orange knob  */
+              position: absolute;
+              top: 50%;
+              width: 64px;
+              height: 64px;
+              margin: -32px 0 0 -32px;
+           
+              content:'\2194';
+              color:white;
+              font-weight:bold;
+              font-size:40px;
+              text-align:center;
+              line-height:58px;
+           
+              background: $brand-color; 
+              border:1px solid $brand-color; 
+              border-radius: 50%;
+              transition:all 0.3s ease;
+              box-shadow:
+                0 2px 6px rgba(0,0,0,.3), 
+                inset 0 2px 0 rgba(255,255,255,.5),
+                // inset 0 60px 50px -30px #ffd466; /* lighten(@orange, 20%)*/ 
+          }
+          
+          .draggable:after {
+              width: 48px;
+              height: 48px;
+              margin: -24px 0 0 -24px;
+              line-height:45px;
+              font-size:30px;
+          }   
+
+        //     .img-comp-slider {
+        //         position: absolute;
+        //         z-index: 9;
+        //         cursor: ew-resize;
+        //         /*set the appearance of the slider:*/
+        //         width: 40px;
+        //         height: 40px;
+        //         background-color: $brand-color;
+        //         opacity: 0.7;
+        //         border-radius: 50%;
+        //         right: 0;
+
+        //         &:before {
+        //             content:"";
+        //             background-image: url(../images/slide-arrow-two-ways.svg);
+        //             background-repeat: no-repeat;
+        //             z-index: 100;
+        //             position: absolute;
+        //             width: 20px;
+        //             height: 20px;
+        //             top: 0%;
+        //             left: 50%;
+        //             transform: translate(-50%, 50%);
+        //         }
+        //     }
+                
+
+        // @include mq($phonePortrait){
+        //     width: 500px;
+        //     height: 400px;
+
+        //     .img-comp-img {
+        //         // position: absolute;
+        //         // width: auto;
+        //         // height: auto;
+        //         // overflow: hidden;
+        //         max-width: 500px;
+        //         max-height: 400px;
+        //     }
+
+        //     .img-comp-img img {
+        //         max-width: 500px;
+        //         max-height: 400px;
+        //     }
+        // }
+
+        // @include mq($phoneLandscape){
+        //     width: 800px;
+        //     height: 600px;
+
+        //     .img-comp-img {
+        //         // position: absolute;
+        //         // width: auto;
+        //         // height: auto;
+        //         // overflow: hidden;
+        //         max-width: 800px;
+        //         max-height: 600px;
+        //     }
+
+        //     .img-comp-img img {
+        //         max-width: 800px;
+        //         max-height: 600px;
+        //     }
+        // }
+
+        // @include mq($tabletLandscape){
+        //     width: 500px;
+        //     height: 400px;
+        //     align-items: center;
+
+        //     .img-comp-img {
+        //         max-width: 500px;
+        //         max-height: 400px;
+        //     }
+
+        //     .img-comp-img img {
+        //         max-width: 500px;
+        //         max-height: 400px;
+        //     }
+        // }
+
     }
     .cstm-text{
         padding:$padding;
