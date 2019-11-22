@@ -24,7 +24,7 @@ header {
         background-size: contain;
         @include mq($phoneLandscape){
             width:30px;
-            height: 30px;;
+            height: 30px;
         }
     }
 
@@ -115,17 +115,24 @@ header {
         }
 
      }
-
-     .icon3{
-         justify-self: end;
-        @include mq($phoneLandscape){
-            display: flex;
-            justify-content: flex-end;
-            .m-icon:not(:last-child){
-                margin-right:20px;
-            }
-        }
-     }
+     
+                .icon3{
+                      justify-self: end;
+                    a{
+                        .m-icon{
+                        margin: 0 10px;
+                        }
+                        &:hover{
+                            filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(310deg) brightness(100%) contrast(68%);
+                        }
+                    }
+                    @include mq($phoneLandscape){
+                        display: flex;
+                        .m-icon:not(:last-child){
+                            margin-right:20px;
+                        }
+                    }
+                }
 
      @include mq($phoneLandscape){
          max-width: 1200px;
