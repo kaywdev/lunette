@@ -16,9 +16,23 @@
         font-size: 0.8em;
     }
 }
-.see-more-btn{
-    background-color:$brand-ppl-color;
-}
+// .see-more-btn{
+//     background-color:$brand-ppl-color;    
+// }
+.form-submit-container input {
+    color: #fff;
+    background-color: $brand-ppl-color;
+    border: 2px solid #8359a8;
+    padding: 8px 16px;
+    font-size: 1.1em;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    @include margin-center;
+    #{$link-hover-selector}{
+        background-color: lighten( $brand-ppl-color, 10% );
+    }
+  }
 
 //Jump-top btn styling
 .gotopbtn{
