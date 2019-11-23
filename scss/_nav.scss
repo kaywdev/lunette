@@ -30,8 +30,9 @@ nav {
         color:black;
         
         #{$link-hover-selector} {
-             color:white;
+            color:white;
             background: linear-gradient($list3);
+            background-clip: text;
             -webkit-background-clip: text;
            -webkit-text-fill-color: transparent;  
         }

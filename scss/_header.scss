@@ -145,11 +145,7 @@ header {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 padding: 10px 0;
-                a{
-                    &:hover{
-                    color: red !important;
-                 }
-                }
+              
                 @include mq($phoneLandscape){
                     max-width: 50%;
                     @include margin-center;

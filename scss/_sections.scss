@@ -392,7 +392,7 @@
     .sns{
         .fab{
             font-size:1.5em;
-            color: $brand-color;
+            // color: $brand-color;
             @include mq($phoneLandscape){
                 padding-right: $padding/2;
             }
@@ -401,6 +401,23 @@
         width: 60%;
         @include margin-center;
         padding: 30px;
+        >a{
+            display: block;
+            text-align: center;
+             font-size: 1.5em;
+            text-decoration: none;
+             outline: none;
+            color: $brand-color;
+            #{$link-hover-selector} {
+                .fab{
+               color:white;
+               background: linear-gradient($list3);
+               background-clip: text;
+               -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;  
+                }
+           }
+        }
     }
 
     //social-wrapper styling
