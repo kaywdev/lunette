@@ -85,11 +85,12 @@ $six-col: colWidth(6);
 }
 
 // Media Query Breakpoints
-$desktopLarge:em(1921);
+$desktopLarge:em(1919);
 $desktopMedium: em(1250);
 $tabletLandscape: em(1024);
 $tabletPortrait: em(850);
 $phoneLandscape: em(670);
+$phoneLandscapeSmall: em(615);
 $phonePortrait: em(420);
 
 // Utility variables
