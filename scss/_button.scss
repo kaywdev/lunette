@@ -16,9 +16,24 @@
         font-size: 0.8em;
     }
 }
-.see-more-btn{
-    background-color:$brand-ppl-color;
-}
+// .see-more-btn{
+//     background-color:$brand-ppl-color;    
+// }
+.form-submit-container input {
+    color: #fff;
+    background-color: $brand-ppl-color;
+    padding: 8px 16px;
+    font-size: 1.1em;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    border-radius: 0;
+    @include margin-center;
+    width: 100%;
+    #{$link-hover-selector}{
+        background-color: lighten( $brand-ppl-color, 10% );
+    }
+  }
 
 //Jump-top btn styling
 .gotopbtn{
