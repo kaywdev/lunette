@@ -22,6 +22,9 @@ $lense-blue: rgba(119,146,175,1);
 $lense-white: rgba(255,255,255,1);
 $lense-pink:rgba(255,157,126,1);
 $lense-black:rgba(0,0,0,1);
+$lense-regular: rgb(231, 238, 250);
+$lense-uv: rgb(204, 242, 243);
+$lense-fog: rgb(212, 209, 209);
 
 
 
@@ -35,6 +38,9 @@ $list4: rgba($btn-pink,0.4) 0%, rgba($btn-orange, 0.4) 100%;
 $lense1: $lense-blue 0%, $lense-white 100%;
 $lense2: $lense-pink 0%, $lense-white 100%;
 $lense3: $lense-black 0%, $lense-white 100%;
+$lense4: $lense-regular 0%, $lense-white 100%;
+$lense5: $lense-uv 0%, $lense-white 100%;
+$lense6: $lense-fog 0%, $lense-white 100%;
 
 
 // background: rgb(251,39,184);

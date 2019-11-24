@@ -155,6 +155,16 @@
                                     .circle-black{
                                         @include gradient(180deg, $lense3);
                                     }
+                                    .circle-regular{
+                                        @include gradient(180deg, $lense4);
+                                    }
+                                    .circle-uv{
+                                        @include gradient(180deg, $lense5);
+                                    }
+                                    .circle-fog{
+                                        @include gradient(180deg, $lense6);
+                                    }
+
                                     }     
                         }
                     }
@@ -193,7 +203,12 @@
                                  .frm-black{
                                     background-color: #1A1A1A;
                                  }   
-                                
+                                .frm-pink{
+                                    background-color: #fc39db;
+                                 }
+                                .frm-transparent{
+                                    background-color: #dadada;
+                                 }
                            
                         }
                     } 
