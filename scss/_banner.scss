@@ -110,11 +110,13 @@
         }
          
     }
+   
     .banner-btn{
         width:100%;
         text-align: center;
         background-color: $brand-color;
         padding:20px 0;
+        border:none;
         a{
         text-decoration: none;
         color: #ffffff;
@@ -144,6 +146,45 @@
         width: 22vw;
     }
 }
+
+.mySlides-text-wrapper{
+    animation: bg-change 10s infinite;
+    animation-timing-function: linear;
+}
+@keyframes bg-change {
+    0%{
+        background-color:#02D9FE
+    }
+    50%{
+        background-color:#02D9FE
+    }
+   50.01% {
+       background-color:$brand-navy-color
+    }
+    100%{background-color:  $brand-navy-color}
+  }
+
+  .mySlides-banner-text{
+    animation: text-color-change 10s infinite;
+    animation-timing-function: linear;
+}
+@keyframes text-color-change {
+    0%{
+       color:black
+    }
+    50%{
+        color:black
+    }
+   50.01% {
+      color:white
+    }
+    100%{
+        color: white
+    }
+  }
+
+
+
 
 .banner-img {
     width: 100%;
