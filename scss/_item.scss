@@ -335,9 +335,6 @@
                 grid-template-columns: 60% 37%;
                 grid-gap: 3%;
             }
-            @include mq($tabletLandscape){
-                grid-gap: 4%;
-            }
         }  //  end of .design-wrapper
 
         //item.html -- item details 
