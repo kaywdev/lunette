@@ -26,7 +26,8 @@
         justify-self: end;
     }
     @include mq($phoneLandscape){
-        padding-right: 60px;
+        padding-right: 50px;
+        padding-left: 30px;
     }
     @include mq($tabletLandscape){
         max-width: 900px;
@@ -41,26 +42,29 @@
         .design-wrapper{
             .rotate-img{
                 .item-img{
-                    width:100%;
-                    height: 300px;
+                    width:100%;    
                     overflow: hidden;
                     margin: 0;
                     img{
                         object-fit: cover;
                         display: block;
+                        @include mq($tabletLandscape){
                         margin:-20px 0;
+                         }
+                    }
+                    @include mq($phoneLandscape){
+                        height: 300px;
                     }
                 }  //  end of .item-img
                 .rotate-range{
                     width:100%;
                     height: 50px;
                     @include margin-center;
-                    margin-top: 5px;
                     
                     .product_slider {
                         -webkit-appearance: none;
                         width: 100%;
-                        height: 25px;
+                        height: 20px;
                         background: #d3d3d3;
                         outline: none;
                         opacity: 0.7;
@@ -95,28 +99,13 @@
                 padding: $padding 0;
 
                 .form-group-lense{
-                    padding-bottom: 30px;
+                    padding-bottom: 20px;
+                    
                 }
                 .form-group-lense input:checked+ label, .form-group-lense input:focus + label {
                     border: 2px solid $brand-ppl-color;
                     border-radius:50%;
                 }
-                // .lense-choice{
-                        
-                //     h2{
-                //         grid-area:title;
-                //         border:1px solid
-                //     }
-                //     .lenses-choice-wrapper{
-                //         grid-area:wrapper;
-                //     }
-                //     @include mq($tabletLandscape){ 
-                //         display:grid;
-                //         grid-area: 
-                //         "title title title"
-                //         "wrapper wrapper wrapper";
-                //     }
-                // }
                 .choices{
                     display: grid;
                     grid-template-columns: 25% 1fr 1fr 1fr;
@@ -208,29 +197,62 @@
                            
                         }
                     } 
+                    h2{
+                        grid-area: title;
+                    }
+                    .lenses-choice-wrapper:first-of-type{
+                        grid-area:blue-ls;
+                    }
+                    .lenses-choice-wrapper:nth-of-type(2){
+                        grid-area:pink-ls;
+                    }
+                    .lenses-choice-wrapper:last-child{
+                        grid-area:black-ls;
+                     }
+
+                     .frame-choice-wrapper:first-of-type{
+                        grid-area:rg-fr;
+                     }
+                    .frame-choice-wrapper:nth-of-type(2){
+                        grid-area:g-fr;
+                    }
+                    .frame-choice-wrapper:last-child{
+                        grid-area:b-fr;
+                    }
+                    
                     
                 }  ////  end of .choise
-                .lenses-choice-wrapper{
-                        grid-area:wrapper;
-                    }
-                    @include mq($tabletLandscape){ 
-                        display:grid;
-                        grid-area: 
-                        "title title title"
-                        "wrapper wrapper wrapper";
-                    }
+               
+                .lenses-choice, .frame-choice {
+                     grid-template-columns: none;
+                       grid-template-areas:
+                           "title title title"
+                           "blue-ls pink-ls black-ls";
+                  }
 
                 .frame-choice{
                     padding-top:0;
+                    grid-template-columns: none;
+                    grid-template-areas:
+                        "title title title"
+                        "rg-fr g-fr b-fr";
                 }  //  end of .frame-choice
 
 
 //Gift choice styling
                 .gift-choice{
                     display: grid;
-                    grid-template-columns: 25% 1fr;
+                    grid-template-columns: none;
+                    grid-template-areas:
+                    "title title title"
+                    "form form form" ;
                     align-items: start;
                     grid-gap: 20px;
+                    form{
+                        grid-area: form;
+                        display: flex;
+                        justify-content: space-around;
+                    }
                     .checkbox-style{
                         justify-self: self-start;
                         position: relative;
@@ -241,7 +263,7 @@
                           @include vh();
                           + label {
                             position: relative;
-                            padding: 0 0 0 2rem;
+                            padding: 0 0 0 1.5rem;
                             // margin-bottom: 1rem;
                             user-select: none;
                             &:before {
@@ -310,8 +332,8 @@
             }  //  end of .selection
             @include mq($phoneLandscape){
                 display: grid;
-                grid-template-columns: 65% 30%;
-                grid-gap: 10px;
+                grid-template-columns: 60% 37%;
+                grid-gap: 3%;
             }
             @include mq($tabletLandscape){
                 grid-gap: 4%;
@@ -354,8 +376,8 @@
             }  //  end of .item-detail
             @include mq($phoneLandscape){
                 display:grid;
-                grid-gap: 5%;
-                grid-template-columns: 50% 45%;            
+                grid-gap: 3%;
+                grid-template-columns: 60% 37%; 
             }
         }   //  end of .desctiprion
     } //  end of .item-container

@@ -29,6 +29,7 @@
     display: block;
     border-radius: 0;
     @include margin-center;
+    width: 100%;
     #{$link-hover-selector}{
         background-color: lighten( $brand-ppl-color, 10% );
     }
