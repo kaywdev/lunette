@@ -1,6 +1,28 @@
 .banner{
     height: 400px;
     position: relative;
+   
+    // .banner-img-wrapper {
+    // position: relative;
+    // height: 400px;
+    // @include bg-img;
+    // @include margin-center;
+
+    .banner-img{
+        @include bg-img;
+        height: 400px;
+        width: 100%;
+    }
+        .banner-img1 {
+            
+            background-image: url(../images/home/m-home-banner-girl.jpg);
+        }
+
+        .banner-img2 {
+            background-image: url(../images/home/m-home-banner-guy.jpg);
+        }
+    // }
+
     @include mq($phoneLandscape){
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -11,20 +33,7 @@
      }
 }
 
-.banner-img-wrapper {
-    position: relative;
-    height: 400px;
-    @include bg-img;
-    @include margin-center;
 
-    .banner-img1 {
-        background-image: url(../images/home/m-home-banner-girl.jpg);
-    }
-
-    .banner-img2 {
-        background-image: url(../images/home/m-home-banner-guy.jpg);
-    }
-}
 
 // .banner-img1 {
     // width: 100%;
