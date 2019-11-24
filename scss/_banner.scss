@@ -148,7 +148,7 @@
 }
 
 .mySlides-text-wrapper{
-    animation: bg-change 10s infinite;
+    animation: bg-change 9.99s infinite;
     animation-timing-function: linear;
 }
 @keyframes bg-change {
@@ -165,7 +165,7 @@
   }
 
   .mySlides-banner-text{
-    animation: text-color-change 10s infinite;
+    animation: text-color-change 9.99s infinite;
     animation-timing-function: linear;
 }
 @keyframes text-color-change {
