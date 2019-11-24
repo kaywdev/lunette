@@ -27,3 +27,22 @@
       ]
     });
   });
+
+
+
+// Index banner slider
+// $(document).ready(function () {
+//   $('.banner-img-wrapper').slick({
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     autoplaySpeed: 2000,
+//     // setting- name: setting - value
+//   });
+// });
+$('.banner').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});

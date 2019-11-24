@@ -1,4 +1,5 @@
 .banner{
+    height: 400px;
     position: relative;
     @include mq($phoneLandscape){
         display: grid;
@@ -10,26 +11,63 @@
      }
 }
 
-.banner-img {
-    width: 100%;
+.banner-img-wrapper {
+    position: relative;
     height: 400px;
-    background-image: url(../images/home/m-home-banner-girl.jpg);
     @include bg-img;
-    background-position: 35% 50%;
-    @include mq($phoneLandscape){
-        order: 2;
+    @include margin-center;
+
+    .banner-img1 {
+        background-image: url(../images/home/m-home-banner-girl.jpg);
     }
-    @include mq($tabletLandscape){
-        height:400px;
-    }
-    @include mq($desktopMedium){
-        height:500px;
-    }
-    @include mq($desktopLarge){
-        background-image: url(../images/home/home-banner-girl.jpg);
-        height: 60vh;
+
+    .banner-img2 {
+        background-image: url(../images/home/m-home-banner-guy.jpg);
     }
 }
+
+// .banner-img1 {
+    // width: 100%;
+    // height: 400px;
+    // background-image: url(../images/home/m-home-banner-girl.jpg);
+    // @include bg-img;
+    // background-position: 35% 50%;
+    // @include mq($phoneLandscape){
+    //     order: 2;
+    // }
+    // @include mq($tabletLandscape){
+    //     height:400px;
+    // }
+    // @include mq($desktopMedium){
+    //     height:500px;
+    // }
+    // @include mq($desktopLarge){
+    //     background-image: url(../images/home/home-banner-girl.jpg);
+    //     height: 60vh;
+    // }
+// }
+
+// .banner-img2 {
+    // width: 100%;
+    // height: 400px;
+    // background-image: url(../images/home/m-home-banner-guy.jpg);
+    // @include bg-img;
+    // background-position: 35% 50%;
+    // @include mq($phoneLandscape){
+    //     order: 2;
+    // }
+    // @include mq($tabletLandscape){
+    //     height:400px;
+    // }
+    // @include mq($desktopMedium){
+    //     height:500px;
+    // }
+    // @include mq($desktopLarge){
+    //     background-image: url(../images/home/home-banner-guy.jpg);
+    //     height: 60vh;
+    // }
+// }
+
 
 .banner-title{
     h1{
