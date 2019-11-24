@@ -1,52 +1,92 @@
-.banner{
+.slideshow-container {
     position: relative;
-    @include mq($phoneLandscape){
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-     }
-     @include mq($desktopLarge){
-         grid-template-columns: 1fr;
-         grid-template-rows: 1fr;
-     }
-}
-
-.banner-img {
-    width: 100%;
+    overflow: hidden;
     height: 400px;
-    background-image: url(../images/home/m-home-banner-girl.jpg);
-    @include bg-img;
-    background-position: 35% 50%;
-    @include mq($phoneLandscape){
+    text-align: center;
+    overflow: hidden;
+    
+
+    @include mq($phoneLandscapeSmall){
         order: 2;
     }
-    @include mq($tabletLandscape){
-        height:400px;
-    }
     @include mq($desktopMedium){
-        height:500px;
+        height: 500px;
     }
     @include mq($desktopLarge){
-        background-image: url(../images/home/home-banner-girl.jpg);
-        height: 60vh;
+        height: 800px;
+        width: 100%;
+        margin: 0;
     }
+    
+    .mySlides {
+        height: 100%;
+    
+        img{
+            display: block;
+            max-width: none;
+            height: 100%;
+            position: relative; 
+            left: 25%;
+            margin-left: -50%; 
+        }
+
+        @include mq($tabletLandscape){
+            img {
+                left: 0%;
+                margin-right: 10%;
+                margin-left: -5%;
+            }
+        }
+
+        @include mq($desktopLarge) {
+            img {
+                height: 100%;
+                left: -10%;
+            }
+        }
+
+        @include mq($desktopWide){
+            img {
+                left: 0%;
+                display: inherit;
+            }
+        }
+    }
+}
+
+
+.banner {
+    position: relative;
+    @include mq($phoneLandscapeSmall){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    @include mq($desktopLarge){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
 }
 
 .banner-title{
     h1{
-        text-align:center;
+        text-align: center;
         line-height: 350px;
         @include mq($tabletLandscape){
-            line-height:400px;
+            line-height: 400px;
         }
         @include mq($desktopMedium){
-            line-height:500px;
-            font-size:2.5em;
+            line-height: 500px;
+            font-size: 2.5em;
         }
     }
 }
 
 .banner-wrapper{
     background-color: #02D9FE;
+
     .banner-text {
         padding: $padding 40px;
         h1{
@@ -57,24 +97,26 @@
             font-family: $century;
             font-size: 0.9em;
         }
-        @include mq($phoneLandscape){
+        @include mq($phoneLandscapeSmall){
             line-height: 1.3em;
             align-self: end;
             justify-self: center;
-            padding: 30px 20px;
+            padding: 0px 20px 30px 20px;
             
         }
         @include mq($desktopLarge){
-            width:100%;
+            width: 100%;
             text-align: center;
         }
          
     }
+   
     .banner-btn{
         width:100%;
         text-align: center;
         background-color: $brand-color;
         padding:20px 0;
+        border:none;
         a{
         text-decoration: none;
         color: #ffffff;
@@ -83,7 +125,7 @@
         font-size: 0.9em;
         
         }
-        @include mq($phoneLandscape){
+        @include mq($phoneLandscapeSmall){
             width: 60%;
             height: 60px;
             justify-self: center;
@@ -91,35 +133,78 @@
             justify-self: center;
         }
     }
-    @include mq($phoneLandscape){
-        display:grid;
+    
+    @include mq($phoneLandscapeSmall){
+        display: grid;
 
     }
     @include mq($desktopLarge){
         position: absolute;
-        top: 10vh;
-         left: 30vw;
-         height: 40vh;
-         width: 20vw;
+        top: 240px;
+        left: 450px;
+        height: 17vw;
+        width: 22vw;
     }
 }
 
-//products.html Styling
+.mySlides-text-wrapper{
+    animation: bg-change 10s infinite;
+    animation-timing-function: linear;
+}
+@keyframes bg-change {
+    0%{
+        background-color:#02D9FE
+    }
+    50%{
+        background-color:#02D9FE
+    }
+   50.01% {
+       background-color:$brand-navy-color
+    }
+    100%{background-color:  $brand-navy-color}
+  }
+
+  .mySlides-banner-text{
+    animation: text-color-change 10s infinite;
+    animation-timing-function: linear;
+}
+@keyframes text-color-change {
+    0%{
+       color:black
+    }
+    50%{
+        color:black
+    }
+   50.01% {
+      color:white
+    }
+    100%{
+        color: white
+    }
+  }
+
+
+
+
+.banner-img {
+    width: 100%;
+    height: 400px;
+    @include bg-img;
+    background-position: 35% 50%;
+    @include mq($phoneLandscapeSmall){
+        height: 400px;
+    } 
+    @include mq($desktopMedium){
+        height: 500px;
+    }
+    
+}
+// products.html Styling
 .p-banner{
     grid-template-columns: 60% 41%;;
 .product-bn-img{
     background-image: url(../images/product/product-banner.jpg);
     order:1;
-    @include mq($phoneLandscape){
-        height: 40vh;
-    } 
-    @include mq($tabletLandscape){
-        height: 50vh;
-    }
-    @include mq($desktopMedium){
-        height: 60vh;
-    }
-    
 }
 
 .product-bn-wrapper{
@@ -129,7 +214,7 @@
         span {
             color: $brand-ppl-color;
         }
-        @include mq($phoneLandscape){
+        @include mq($phoneLandscapeSmall){
             order:2;
             display: grid;
         .product-bn-text{
@@ -143,19 +228,9 @@
         }
 
     }  
-    
-    @include mq($phoneLandscape){
-        height: 40vh;
-    } 
-    @include mq($tabletLandscape){
-        height: 50vh;
-    }
-    @include mq($desktopMedium){
-        height: 60vh;
-    }
 
 }
-  //About.html banner styling
+  // About.html banner styling
    .about-banner{
     .about-bn-img{
         background-image: url(../images/about/m-about-banner-women.jpg);
