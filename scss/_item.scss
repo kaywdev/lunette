@@ -26,7 +26,8 @@
         justify-self: end;
     }
     @include mq($phoneLandscape){
-        padding-right: 60px;
+        padding-right: 50px;
+        padding-left: 30px;
     }
     @include mq($tabletLandscape){
         max-width: 900px;
@@ -41,17 +42,54 @@
         .design-wrapper{
             .rotate-img{
                 .item-img{
-                    width:100%;
-                    height: 200px;
-                    background-color: $img-bg-color;
-                    @include margin-center;
+                    width:100%;    
+                    overflow: hidden;
+                    margin: 0;
+                    img{
+                        object-fit: cover;
+                        display: block;
+                        @include mq($tabletLandscape){
+                        margin:-20px 0;
+                         }
+                    }
+                    @include mq($phoneLandscape){
+                        height: 300px;
+                    }
                 }  //  end of .item-img
                 .rotate-range{
                     width:100%;
                     height: 50px;
-                    background-color: $img-bg-color;
                     @include margin-center;
-                    margin-top: 5px;
+                    
+                    .product_slider {
+                        -webkit-appearance: none;
+                        width: 100%;
+                        height: 20px;
+                        background: #d3d3d3;
+                        outline: none;
+                        opacity: 0.7;
+                        -webkit-transition: .2s;
+                        transition: opacity .2s;
+                        border-radius: 50px;
+                    }
+
+                    .product_slider::-webkit-slider-thumb {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 30px;
+                        height: 30px;
+                        background: $brand-ppl-color;
+                        border-radius: 50%;
+                        cursor: pointer;
+                    }
+
+                    .product_slider::-moz-range-thumb {
+                        width: 25px;
+                        height: 25px;
+                        background: $light-purple;
+                        cursor: pointer;
+                    }
+
                 } //  end of .rotate-range
             } //  end of .rotate-img
 
@@ -59,10 +97,20 @@
                 display: grid;
                 grid-gap: 30px;
                 padding: $padding 0;
+
+                .form-group-lense{
+                    padding-bottom: 20px;
+                    
+                }
+                .form-group-lense input:checked+ label, .form-group-lense input:focus + label {
+                    border: 2px solid $brand-ppl-color;
+                    border-radius:50%;
+                }
                 .choices{
                     display: grid;
                     grid-template-columns: 25% 1fr 1fr 1fr;
                     align-items: center;
+                    // justify-items: center;
                     grid-gap: 10px;
                     h2{
                         padding: 0;
@@ -71,75 +119,208 @@
                         color: $brand-ppl-color;
                         font-family: $condor;
                     }
-                    .lense-img{
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 50%;
-                        border: 1px solid #dadada;
-                        @include mq($phoneLandscape){
-                            width: 35px;
-                            height: 35px; 
+                    .lenses-choice-wrapper,
+                    .frame-choice-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .lenses-choice-wrapper{
+                        .ls-choice-form{
+                            position: relative;
+                                    input{
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+                                    label{
+                                        position: absolute;
+                                        top: 3px;
+                                        left: 2px;
+                                        width: 50px;
+                                        height: 50px;
+                                    
+                                    .circle{
+                                            display: block;
+                                            width:100%;
+                                            height: 100%;
+                                            border: 1px solid #dadada;
+                                            border-radius: 50%;
+                                        }
+                                    .circle-blue{
+                                        @include gradient(180deg, $lense1);
+                                    }
+                                    .circle-pink{
+                                        @include gradient(180deg, $lense2);
+                                    }
+                                    .circle-black{
+                                        @include gradient(180deg, $lense3);
+                                    }
+                                    }     
                         }
-                    } //  end of .lense-img
-                    .lense1{
-                    @include gradient(180deg, $lense1);
                     }
-                    .lense2{
-                        @include gradient(180deg, $lense2);
+
+                    .frm-choice-form input:checked+ label, .frm-choice-form input:focus + label {
+                        border: 2px solid $brand-ppl-color;
+                      
                     }
-                    .lense3{
-                            @include gradient(180deg, $lense3);
+
+                    .frame-choice-wrapper {
+                        .frm-choice-form{
+                            position: relative;
+                            input{
+                                opacity: 0;
+                                position: fixed;
+                                width: 0;
+                                
+                            }   
+                             label{
+                                    display: inline-block;
+                                    // background-color: red;
+                                    // position: absolute;
+                                    // top: 3px;
+                                    // left: 2px;
+                                    width: 40px;
+                                    height: 10px;
+                                    padding: 4px;
+                                    border: 1px solid #dadada;
+                                }
+                                .frm-rosegold{
+                                    background-color: #c59184;
+                                 }
+                                .frm-gold{
+                                    background-color: #d6bb6b;
+                                 }
+                                 .frm-black{
+                                    background-color: #1A1A1A;
+                                 }   
+                                
+                           
+                        }
+                    } 
+                    h2{
+                        grid-area: title;
+                    }
+                    .lenses-choice-wrapper:first-of-type{
+                        grid-area:blue-ls;
+                    }
+                    .lenses-choice-wrapper:nth-of-type(2){
+                        grid-area:pink-ls;
+                    }
+                    .lenses-choice-wrapper:last-child{
+                        grid-area:black-ls;
                      }
-                    .frame-img{
-                        width: 50px;
-                        height: 10px;
-                        border: 1px solid #dadada;
-                        @include mq($phoneLandscape){
-                            width: 35px;
-                        }
-                    } //  end of .frame-img
-                  .frame1{
-                      background-color: $img-bg-color;
-                  }
-                  .frame2{
-                    background-color: #E0C265;
+
+                     .frame-choice-wrapper:first-of-type{
+                        grid-area:rg-fr;
+                     }
+                    .frame-choice-wrapper:nth-of-type(2){
+                        grid-area:g-fr;
                     }
-                    .frame3{
-                        background-color: #1A1A1A;
+                    .frame-choice-wrapper:last-child{
+                        grid-area:b-fr;
                     }
+                    
+                    
                 }  ////  end of .choise
+               
+                .lenses-choice, .frame-choice {
+                     grid-template-columns: none;
+                       grid-template-areas:
+                           "title title title"
+                           "blue-ls pink-ls black-ls";
+                  }
 
                 .frame-choice{
                     padding-top:0;
+                    grid-template-columns: none;
+                    grid-template-areas:
+                        "title title title"
+                        "rg-fr g-fr b-fr";
                 }  //  end of .frame-choice
+
+
+//Gift choice styling
                 .gift-choice{
                     display: grid;
-                    grid-template-columns: 25% 1fr;
+                    grid-template-columns: none;
+                    grid-template-areas:
+                    "title title title"
+                    "form form form" ;
                     align-items: start;
+                    grid-gap: 20px;
+                    form{
+                        grid-area: form;
+                        display: flex;
+                        justify-content: space-around;
+                    }
                     .checkbox-style{
                         justify-self: self-start;
                         position: relative;
                         input{
                             visibility: hidden;   
                         }
+                        input[type="checkbox"] {
+                          @include vh();
+                          + label {
+                            position: relative;
+                            padding: 0 0 0 1.5rem;
+                            // margin-bottom: 1rem;
+                            user-select: none;
+                            &:before {
+                              content: "";
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              width: 1.1rem;
+                              height: 1.1rem;
+                              border: 2px solid#dadada;
+                              border-radius: 0.25rem;
+                              background: #EBE7FF;
+                              text-align: center;
+                              transition: background 200ms ease-out;
+                            }
+                            &:after {
+                              content: "";
+                              position: absolute;
+                              transform: scale(0);
+                              transition: transform 200ms ease-out;
+                            }
+                          }
+                        }
+                        
+                        input[type="checkbox"] {
+                          + label {
+                            &:after {
+                              background-color: transparent;
+                              content: "";
+                              display: block;
+                              position: absolute;
+                              left: 0.4rem;
+                              top: -0.1rem;
+                              width: 0.5rem;
+                              height: 1rem;
+                              opacity: 0.2;
+                              border-bottom: 3px solid $brand-ppl-color;
+                              border-right: 3px solid $brand-ppl-color;
+                              transform: rotate(45deg);
+                              transition: border-color 0.3s ease;
+                            }
+                          }
+                          &:checked {
+                            + label {
+                              &:before {
+                                content: "";
+                              }
+                        
+                              &:after {
+                                content: "";
+                                opacity: 1;
+                              }
+                            }
+                          }
+                        }
 
                     }
-                    .checkbox-style label:before {
-                        content:"";
-                        position: absolute;
-                        width:15px;
-                        height: 15px;
-                        top: 5px;
-                        left: 0px;
-                        background-color: #EBE7FF;
-                        border: 1px solid #dadada;
-                      }
-                      .checkbox-style input:checked + .checkbox-style label:before {
-                        font-family: "Font Awesome"; 
-                        content: "\f00c";
-                        color: #bbb;
-                    }
-                      
                     
                     h2{
                         padding-top:0;
@@ -151,8 +332,8 @@
             }  //  end of .selection
             @include mq($phoneLandscape){
                 display: grid;
-                grid-template-columns: 65% 30%;
-                grid-gap: 10px;
+                grid-template-columns: 60% 37%;
+                grid-gap: 3%;
             }
             @include mq($tabletLandscape){
                 grid-gap: 4%;
@@ -195,8 +376,8 @@
             }  //  end of .item-detail
             @include mq($phoneLandscape){
                 display:grid;
-                grid-gap: 5%;
-                grid-template-columns: 50% 45%;            
+                grid-gap: 3%;
+                grid-template-columns: 60% 37%; 
             }
         }   //  end of .desctiprion
     } //  end of .item-container

@@ -1,13 +1,14 @@
 // Header styles
 header {
     // background-color: $brand-color;
-    padding: $padding/2 $padding 0;
+    padding: 20px 30px 0;
     align-items: center;
-    position: relative;
+   
 
     h1 {
         @include flatten;
         width: 3.5em;
+        align-self: end;
         @include mq($phoneLandscape){
             text-align: center;
         }
@@ -74,10 +75,12 @@ header {
     
 
     .top-header{
+        position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
-        align-items: center;
+        // align-items: center;
+        height: 60px;
         width:100%;
         @include mq($phoneLandscape){
          display:grid;
@@ -102,6 +105,9 @@ header {
             align-items: center;
             padding: 60px 40px 100px;
         }
+       li:nth-child(2){
+          padding-bottom: 20px;
+        }
         li:nth-child(3){
             border-top: 1px solid black;
         }
@@ -111,17 +117,30 @@ header {
         a{
             text-align: inherit;
             line-height: 90px;
-            
+            font-size: 1.4em;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-
+        .hm-icon {
+            width: 50px;
+            height: 40px;
+            @include bg-img;
+            background-size: contain;
+        }
+        .eg-icon{
+            background-image:url(../images/svg-icons/nav-eyeglasses.svg);
+        }
+        .sg-icon{
+            background-image:url(../images/svg-icons/nav-sunglasses_gradient.svg);
+        }
      }
      
                 .icon3{
                       justify-self: end;
                     a{
-                        .m-icon{
-                        margin: 0 10px;
-                        }
+                        
                         #{$link-hover-selector} {
                             filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(310deg) brightness(100%) contrast(68%);
                         }
@@ -130,6 +149,11 @@ header {
                         display: flex;
                         .m-icon:not(:last-child){
                             margin-right:20px;
+                        }
+                        a{
+                            .m-icon{
+                                margin: 0 10px;
+                                }
                         }
                     }
                 }

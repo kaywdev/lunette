@@ -85,7 +85,7 @@ $six-col: colWidth(6);
 }
 
 // Media Query Breakpoints
-$desktopWide:em(2400);
+$desktopWide:em(2300);
 $desktopLarge:em(1919);
 $desktopMedium: em(1250);
 $tabletLandscape: em(1024);
@@ -96,3 +96,6 @@ $phonePortrait: em(420);
 
 // Utility variables
 $link-hover-selector: '&:hover, &:focus, &:active';
+
+//submit button
+$off-wht: rgba(white,.4);
