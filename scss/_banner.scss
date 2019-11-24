@@ -17,10 +17,6 @@
         width: 100%;
         margin: 0;
     }
-    @include mq($desktopWide){
-        margin: 0 auto;
-        max-width: 2400px;
-    }
     
     .mySlides {
         height: 100%;
@@ -37,22 +33,22 @@
         @include mq($tabletLandscape){
             img {
                 left: 0%;
-                margin-left: 0%;
-            }
-        }
-
-        @include mq($desktopMedium) {
-            img {
-                // height: 500px;
+                margin-right: 10%;
+                margin-left: -5%;
             }
         }
 
         @include mq($desktopLarge) {
             img {
                 height: 100%;
-                // width: 100%;
-                // left: -15%;
-                // margin-left: -50%; 
+                left: -10%;
+            }
+        }
+
+        @include mq($desktopWide){
+            img {
+                left: 0%;
+                display: inherit;
             }
         }
     }
@@ -76,14 +72,14 @@
 
 .banner-title{
     h1{
-        text-align:center;
+        text-align: center;
         line-height: 350px;
         @include mq($tabletLandscape){
-            line-height:400px;
+            line-height: 400px;
         }
         @include mq($desktopMedium){
-            line-height:500px;
-            font-size:2.5em;
+            line-height: 500px;
+            font-size: 2.5em;
         }
     }
 }
@@ -105,7 +101,7 @@
             line-height: 1.3em;
             align-self: end;
             justify-self: center;
-            padding: 30px 20px;
+            padding: 0px 20px 30px 20px;
             
         }
         @include mq($desktopLarge){
@@ -138,17 +134,17 @@
     
     @include mq($phoneLandscapeSmall){
         display: grid;
-        // height: 400px;
 
     }
     @include mq($desktopLarge){
         position: absolute;
-        top: 5vw;
-        left: 20vw;
-        height: 16vw;
-        width: 16vw;
+        top: 240px;
+        left: 450px;
+        height: 17vw;
+        width: 22vw;
     }
 }
+
 
 // products.html Styling
 .p-banner{
