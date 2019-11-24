@@ -1,35 +1,86 @@
-.banner{
-    position: relative;
-    @include mq($phoneLandscape){
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-     }
-     @include mq($desktopLarge){
-         grid-template-columns: 1fr;
-         grid-template-rows: 1fr;
-     }
+.banner-img {
+    img{
+        max-width: 100%;
+        height: auto;
+    }
 }
 
-.banner-img {
-    width: 100%;
-    height: 400px;
-    background-image: url(../images/home/m-home-banner-girl.jpg);
-    @include bg-img;
-    background-position: 35% 50%;
-    @include mq($phoneLandscape){
-        order: 2;
-    }
-    @include mq($tabletLandscape){
-        height:400px;
-    }
-    @include mq($desktopMedium){
-        height:500px;
-    }
-    @include mq($desktopLarge){
-        background-image: url(../images/home/home-banner-girl.jpg);
-        height: 60vh;
-    }
-}
+// .banner{
+//     position: relative;
+
+//     .banner-img{
+//         @include bg-img;
+//         height: 400px;
+//         width: 100%;
+//         background-position: 35% 50%;
+//     }
+
+//     .banner-img1 {
+//         background-image: url(../images/home/m-home-banner-girl.jpg);
+//         // background-position: 35% 50%;
+//     }
+
+//     .banner-img2 {
+//         background-image: url(../images/home/m-home-banner-guy.jpg);
+//         // background-position: 35% 50%;
+//     }
+
+//     @include mq($phoneLandscape){
+//         display: grid;
+//         grid-template-columns: 1fr 1fr;
+//         .banner-img1 {
+//             order: 2;
+//         }
+//         .banner-img2 {
+//             order: 2;
+//         }
+//     }
+
+//     @include mq($desktopMedium){
+//         height: 500px;
+//         .banner-img1 {
+//             height: 500px;
+//         }
+//         .banner-img2 {
+//             height: 500px;
+//         }
+//     }
+    
+//     @include mq($desktopLarge){
+//         grid-template-columns: 1fr;
+//         grid-template-rows: 1fr;
+//         .banner-img1 {
+//             background-image: url(../images/home/home-banner-girl.jpg);
+//             height: 60vh;
+//         }
+//         .banner-img2 {
+//             background-image: url(../images/home/home-banner-guy.jpg);
+//             height: 60vh;
+//         }
+//     }
+    
+// }
+
+// .banner-img {
+//     width: 100%;
+//     height: 400px;
+//     background-image: url(../images/home/m-home-banner-girl.jpg);
+//     @include bg-img;
+//     background-position: 35% 50%;
+//     @include mq($phoneLandscape){
+//         order: 2;
+//     }
+//     @include mq($tabletLandscape){
+//         height:400px;
+//     }
+//     @include mq($desktopMedium){
+//         height:500px;
+//     }
+//     @include mq($desktopLarge){
+//         background-image: url(../images/home/home-banner-girl.jpg);
+//         height: 60vh;
+//     }
+// }
 
 .banner-title{
     h1{
