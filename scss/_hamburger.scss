@@ -2,7 +2,7 @@
 .hamburger {
 
     display: block;
-    width: 40px;
+    width: 35px;
     background-color: transparent;
     border: none;
     padding: 0;
@@ -12,6 +12,7 @@
     .hamburger-content {
         display: block;
         height: 16px;
+        width: 35px;
         background-image: url(../images/svg-icons/hamburger-gls.svg);
         background-repeat: no-repeat;
         background-size: contain;
@@ -21,12 +22,12 @@
     .hm-btn{
         @include btn(30px, 18px);
                 .hm-line{
-                    @include icon(0px, 40px);
+                    @include icon(0px, 35px);
                 &:before{
-                    @include icon-before(2px, 40px, -17px, 0);
+                    @include icon-before(2px, 35px, -17px, 0);
                 }
                 &:after{
-                    @include icon-after(2px, 40px, -5px, 0);
+                    @include icon-after(2px, 35px, -5px, 0);
                 }
                 }
             .show &{
@@ -36,7 +37,7 @@
                                 transform: rotateZ(30deg) scaleX(1.05) translate(6px, 9px);
                             }
                             &:after{
-                              transform: rotateZ(-30deg) scaleX(1.05) translate(0px, -2px);
+                              transform: rotateZ(-30deg) scaleX(1.05) translate(0px, 0px);
                             }
                           }
             }
