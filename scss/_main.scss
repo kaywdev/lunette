@@ -1,11 +1,7 @@
+// Main Settings
 main {
-   
-
     section:not(:first-child, .styles) {
         margin-top: $padding;
     }
-
-
-
     
 }

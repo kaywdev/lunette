@@ -23,12 +23,6 @@ let fileNum = document.getElementById('myRange').value;
 
 $checkboxLense.on('change', function () {
     lense = $(this).val();
-    // console.log(lense, frame)
-    // $slide.attr('href', `images/product-item/eg/eg_${frame}_${lense}_${fileNum}.png`);
-    // $slide.attr({
-    //     src: `images/product-item/eg/eg_${frame}_${lense}_${fileNum}.png`,
-    //     alt: `${frame} ${lense} eyeglasses`
-    // });
 
     // Update the color output
     $selectedLenseOut.text(capitalizeFirstLetter(lense));
