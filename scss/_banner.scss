@@ -109,6 +109,7 @@
         p {
             font-family: $century;
             font-size: 0.9em;
+            font-weight: 400;
         }
         @include mq($phoneLandscapeSmall){
             line-height: 1.3em;
