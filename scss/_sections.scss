@@ -175,7 +175,7 @@
               width: 64px;
               height: 64px;
               margin: -32px 0 0 -32px;
-           
+              font-family: Arial, Helvetica, sans-serif;
               content:'\2194';
               color:white;
               font-weight:bold;
@@ -382,6 +382,9 @@
                 font-size: 0.7em;
                 text-transform: uppercase;
                 cursor: pointer;
+                -webkit-appearance: none;
+                -webkit-border-radius:0px;
+                border-radius: 0;
             }
         }    //  end of .submit-group
     }  //  end of .subsctiption
