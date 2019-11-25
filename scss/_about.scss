@@ -34,10 +34,10 @@
                     height: 300px;
                     @include bg-img;
                     @include mq($phoneLandscape){
-                        height: 15vh;
+                      max-height: 200px;
                     }
                     @include mq($tabletLandscape){
-                        height: 30vh;
+                    max-height: 250px;
                     } 
                 }  // end of .process-img
                     .planning{

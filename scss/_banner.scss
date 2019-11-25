@@ -221,11 +221,15 @@
     @include mq($desktopMedium){
         height: 500px;
     }
+
+    @include mq($desktopsemiLarge){
+        height:700px;
+    }
     
 }
 // products.html Styling
 .p-banner{
-    grid-template-columns: 60% 41%;;
+    grid-template-columns: 60% 41%;
 .product-bn-img{
     background-image: url(../images/product/product-banner.jpg);
     order:1;
@@ -260,6 +264,9 @@
         background-image: url(../images/about/m-about-banner-women.jpg);
         @include bg-img;
         background-position: 43% 50%;
+        @include mq($desktopLarge){
+            background-position: 43% 0%;
+        }
     }
     .about-bn-wrapper{
         background-color: #2C223D;
@@ -272,6 +279,9 @@
 .c-banner {
     .contact-bn-img {
         background-image: url(../images/contact/contact-banner-man.jpg);
+        @include mq($desktopLarge){
+            background-position: 43% 15%;
+        }
     }
     .contact-bn-wrapper{
     background-color: $brand-navy-color;

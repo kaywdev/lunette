@@ -159,8 +159,11 @@ fieldset {
                         align-content: center;
                         letter-spacing: $letterspace;
                         display:block;
+                        #{$link-hover-selector}{
+                            background-color: lighten( $brand-navy-color, 20% );
+                        }
                     }
-                
+                   
             } //end of cf
         }//end of contact
 }
