@@ -63,6 +63,9 @@ fieldset {
                     font-size: 1em;
                     font-family: $futura;
                     letter-spacing: $letterspace;
+                    -webkit-border-radius:0px;
+                    -webkit-appearance: none;
+                    border-radius: 0;
                 }
             
                 .c-name,
@@ -131,6 +134,7 @@ fieldset {
                     right: 1.2em;
                     margin-top: -1.5em;
                     color: $brand-color;
+                    top: 39px;
                   }
                 
                   .custom-dropdown select[disabled] {

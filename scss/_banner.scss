@@ -11,11 +11,17 @@
     }
     @include mq($desktopMedium){
         height: 500px;
+        width: 100%;
     }
     @include mq($desktopLarge){
         height: 800px;
         width: 100%;
         margin: 0;
+    }
+    @include mq($desktopWide){
+        height: 850px;
+        display: grid;
+        justify-content: center;
     }
     
     .mySlides {
@@ -34,7 +40,7 @@
             img {
                 left: 0%;
                 margin-right: 10%;
-                margin-left: -5%;
+                margin-left: 0%;
             }
         }
 
@@ -49,6 +55,12 @@
             img {
                 left: 0%;
                 display: inherit;
+            }
+        }
+        @include mq($desktoptvWide){
+            position: relative;
+            img {
+               max-width: 3300px;
             }
         }
     }
@@ -66,6 +78,7 @@
     @include mq($desktopLarge){
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+    
     }
 
 }
@@ -125,6 +138,9 @@
         font-size: 0.9em;
         
         }
+        #{$link-hover-selector}{
+            background-color: lighten( $brand-color, 10% );
+        }
         @include mq($phoneLandscapeSmall){
             width: 60%;
             height: 60px;
@@ -150,6 +166,14 @@
 .mySlides-text-wrapper{
     animation: bg-change 9.99s infinite;
     animation-timing-function: linear;
+
+    @include mq($desktopWide){
+        position: absolute;
+        top: 125px;
+        left: 32vw;
+        height: 650px;
+        width: 18vw;
+    }
 }
 @keyframes bg-change {
     0%{

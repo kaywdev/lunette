@@ -6,6 +6,7 @@
     padding: 10px;
     background-color: $brand-color;
     
+    
     a{
         text-decoration: none;
         opacity: 1;
@@ -14,6 +15,10 @@
         text-transform: uppercase;
         letter-spacing: $hd-letterspace;
         font-size: 0.8em;
+       
+    }
+    #{$link-hover-selector}{
+        background-color: lighten( $brand-color, 10% );
     }
 }
 // .see-more-btn{
@@ -30,6 +35,9 @@
     border-radius: 0;
     @include margin-center;
     width: 100%;
+    -webkit-appearance: none;
+    -webkit-border-radius:0px;
+    border-radius: 0;
     #{$link-hover-selector}{
         background-color: lighten( $brand-ppl-color, 10% );
     }
