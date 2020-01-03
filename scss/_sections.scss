@@ -421,6 +421,10 @@
                 }
            }
         }
+        @include mq($phoneLandscape){
+            @include flex-layout-row;
+                width: 67%;
+        }
     }
 
     //social-wrapper styling
